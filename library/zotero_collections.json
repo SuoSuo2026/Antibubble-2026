@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-06-04T04:37:22",
+  "collections": [
+    {
+      "key": "I4MQPEQS",
+      "name": "202509 空泡动力学课程",
+      "parentCollection": false,
+      "version": 1518
+    },
+    {
+      "key": "732LRHWG",
+      "name": "202603 科技论文写作课程",
+      "parentCollection": false,
+      "version": 1870
+    },
+    {
+      "key": "VDYXPLFE",
+      "name": "反气泡",
+      "parentCollection": false,
+      "version": 565
+    },
+    {
+      "key": "MNKT4RQR",
+      "name": "P1 反气泡与PB",
+      "parentCollection": "VDYXPLFE",
+      "version": 1838
+    },
+    {
+      "key": "ZP2VPGMP",
+      "name": "气膜液膜测量",
+      "parentCollection": "MNKT4RQR",
+      "version": 2438
+    },
+    {
+      "key": "K3QEFMXF",
+      "name": "软通道与低剪切",
+      "parentCollection": "MNKT4RQR",
+      "version": 2361
+    },
+    {
+      "key": "LKWSD8ED",
+      "name": "输运引言",
+      "parentCollection": "MNKT4RQR",
+      "version": 2437
+    },
+    {
+      "key": "3Q7W55UB",
+      "name": "Antibubble-titled papers",
+      "parentCollection": "MNKT4RQR",
+      "version": 2068
+    },
+    {
+      "key": "7GPLTLJN",
+      "name": "P2 超声反气泡溃灭",
+      "parentCollection": "VDYXPLFE",
+      "version": 1638
+    },
+    {
+      "key": "GRCRCM6P",
+      "name": "冲击波诱导液滴溃灭",
+      "parentCollection": "7GPLTLJN",
+      "version": 1791
+    },
+    {
+      "key": "UGV47SU6",
+      "name": "反气泡对超声流量计的影响",
+      "parentCollection": "7GPLTLJN",
+      "version": 1639
+    },
+    {
+      "key": "PYYHBLSA",
+      "name": "新反气泡-封装液滴制备方法",
+      "parentCollection": "7GPLTLJN",
+      "version": 1695
+    },
+    {
+      "key": "EAK7WGFA",
+      "name": "供学习",
+      "parentCollection": false,
+      "version": 967
+    },
+    {
+      "key": "GRQ9BQER",
+      "name": "202509",
+      "parentCollection": "EAK7WGFA",
+      "version": 1647
+    },
+    {
+      "key": "4W3LC226",
+      "name": "流体力学教材",
+      "parentCollection": false,
+      "version": 564
+    },
+    {
+      "key": "2ZL4F2M4",
+      "name": "涡环",
+      "parentCollection": false,
+      "version": 566
+    }
+  ],
+  "tree": [
+    {
+      "key": "I4MQPEQS",
+      "name": "202509 空泡动力学课程",
+      "children": []
+    },
+    {
+      "key": "732LRHWG",
+      "name": "202603 科技论文写作课程",
+      "children": []
+    },
+    {
+      "key": "VDYXPLFE",
+      "name": "反气泡",
+      "children": [
+        {
+          "key": "MNKT4RQR",
+          "name": "P1 反气泡与PB",
+          "children": [
+            {
+              "key": "ZP2VPGMP",
+              "name": "气膜液膜测量",
+              "children": []
+            },
+            {
+              "key": "K3QEFMXF",
+              "name": "软通道与低剪切",
+              "children": []
+            },
+            {
+              "key": "LKWSD8ED",
+              "name": "输运引言",
+              "children": []
+            },
+            {
+              "key": "3Q7W55UB",
+              "name": "Antibubble-titled papers",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "7GPLTLJN",
+          "name": "P2 超声反气泡溃灭",
+          "children": [
+            {
+              "key": "GRCRCM6P",
+              "name": "冲击波诱导液滴溃灭",
+              "children": []
+            },
+            {
+              "key": "UGV47SU6",
+              "name": "反气泡对超声流量计的影响",
+              "children": []
+            },
+            {
+              "key": "PYYHBLSA",
+              "name": "新反气泡-封装液滴制备方法",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "EAK7WGFA",
+      "name": "供学习",
+      "children": [
+        {
+          "key": "GRQ9BQER",
+          "name": "202509",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "4W3LC226",
+      "name": "流体力学教材",
+      "children": []
+    },
+    {
+      "key": "2ZL4F2M4",
+      "name": "涡环",
+      "children": []
+    }
+  ]
+}

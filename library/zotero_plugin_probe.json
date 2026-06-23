@@ -1,0 +1,154 @@
+[
+  {
+    "label": "root",
+    "path": "/api/",
+    "status": 200,
+    "content_type": "text/plain",
+    "total": null,
+    "summary": "Nothing to see here."
+  },
+  {
+    "label": "schema",
+    "path": "/api/schema",
+    "status": 200,
+    "content_type": "application/json",
+    "total": null,
+    "summary": {
+      "type": "object",
+      "keys": [
+        "version",
+        "itemTypes",
+        "meta",
+        "csl",
+        "locales"
+      ]
+    }
+  },
+  {
+    "label": "itemTypes",
+    "path": "/api/itemTypes",
+    "status": 200,
+    "content_type": "application/json",
+    "total": null,
+    "summary": {
+      "type": "array",
+      "len": 40
+    }
+  },
+  {
+    "label": "itemFields",
+    "path": "/api/itemFields",
+    "status": 200,
+    "content_type": "application/json",
+    "total": null,
+    "summary": {
+      "type": "array",
+      "len": 123
+    }
+  },
+  {
+    "label": "creatorFields",
+    "path": "/api/creatorFields",
+    "status": 200,
+    "content_type": "application/json",
+    "total": null,
+    "summary": {
+      "type": "array",
+      "len": 3
+    }
+  },
+  {
+    "label": "collections",
+    "path": "/api/users/0/collections",
+    "status": 200,
+    "content_type": "application/json",
+    "total": "16",
+    "summary": {
+      "type": "array",
+      "len": 16
+    }
+  },
+  {
+    "label": "topCollections",
+    "path": "/api/users/0/collections/top",
+    "status": 200,
+    "content_type": "application/json",
+    "total": "6",
+    "summary": {
+      "type": "array",
+      "len": 6
+    }
+  },
+  {
+    "label": "topItems",
+    "path": "/api/users/0/items/top",
+    "status": 200,
+    "content_type": "application/json",
+    "total": "225",
+    "summary": {
+      "type": "array",
+      "len": 225
+    }
+  },
+  {
+    "label": "tags",
+    "path": "/api/users/0/tags",
+    "status": 200,
+    "content_type": "application/json",
+    "total": "115",
+    "summary": {
+      "type": "array",
+      "len": 115
+    }
+  },
+  {
+    "label": "searches",
+    "path": "/api/users/0/searches",
+    "status": 200,
+    "content_type": "application/json",
+    "total": "0",
+    "summary": {
+      "type": "array",
+      "len": 0
+    }
+  },
+  {
+    "label": "groups",
+    "path": "/api/users/0/groups",
+    "status": 200,
+    "content_type": "application/json",
+    "total": "0",
+    "summary": {
+      "type": "array",
+      "len": 0
+    }
+  },
+  {
+    "label": "fulltextVersions",
+    "path": "/api/users/0/fulltext?since=0",
+    "status": 200,
+    "content_type": "application/json",
+    "total": null,
+    "summary": {
+      "type": "object",
+      "keys": [
+        "24SMD4TZ",
+        "28KAC68P",
+        "2DD6SV77",
+        "2IGCE7GW",
+        "2RHI9QQZ",
+        "2V6DFC32",
+        "2WG6T6MC",
+        "2X2PMIPU"
+      ]
+    }
+  },
+  {
+    "label": "connectorPing",
+    "path": "/connector/ping",
+    "status": 200,
+    "content_type": "text/html",
+    "total": null,
+    "summary": "<!DOCTYPE html><html><body>Zotero is running</body></html>"
+  }
+]

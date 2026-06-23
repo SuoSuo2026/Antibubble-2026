@@ -1,0 +1,22 @@
+pythonProject/
+│
+├─ config.yaml
+├─ config_loader.py
+├─ main.py
+│
+├─ io_utils.py
+├─ image_utils.py
+├─ tracking.py
+├─ analysis.py
+├─ visualization.py
+│
+├─ main_old.py
+├─ 0407-2.tif
+
+config_loader.py：配置入口
+io_utils.py：数据读取
+image_utils.py：图像底层操作
+tracking.py：目标提取与跟踪
+analysis.py：运动学 / 拟合 / FFT
+visualization.py：统一导图
+main.py：总调度

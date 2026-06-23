@@ -1,0 +1,160 @@
+\documentclass[%
+ preprint,
+% reprint,
+ superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprintnumbers,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+ aps, prl,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+\usepackage{graphicx}% Include figure files
+\usepackage{float}% 控制图片位置
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hyperref}% add hypertext capabilities
+\usepackage{txfonts}
+\usepackage{color}% 更改字体颜色
+\usepackage{esint}
+%\usepackage{indentfirst}% 设置段落首行缩进
+%\usepackage{showkeys}% 展示标签、关键词等
+\usepackage{soul,color,xcolor}
+\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+                              %\linenumbers\relax % Commence numbering lines
+\newcommand{\red}{\textcolor{red}}
+\newcommand{\blue}{\textcolor{blue}}
+\newcommand{\cyan}{\textcolor{cyan}}
+
+\begin{document}
+
+\preprint{APS/123-QED}
+
+\title{Antibubble formation with Plateau borders}% Force line breaks with \\
+
+\author{Ann Author}
+\affiliation{%
+ Authors' institution and/or address\\
+ This line break forced with \textbackslash\textbackslash
+}%
+
+\author{Second Author}%
+ \email{Second.Author@institution.edu}
+\affiliation{%
+ Authors' institution and/or address\\
+ This line break forced with \textbackslash\textbackslash
+}%
+
+\author{Charlie Author}
+ \affiliation{
+ Second institution and/or address\\
+ This line break forced with \textbackslash\textbackslash
+}%
+\affiliation{
+ Third institution, the second for Charlie Author
+}%
+
+\author{Delta Author}
+\email{CorrespondingAuthor@mail.tsinghua.edu.cn}
+\affiliation{%
+ Authors' institution and/or address\\
+ This line break forced with \textbackslash\textbackslash
+}%
+
+\date{\today}% It is always \today, today,
+             %  but any date may be explicitly specified
+
+\begin{abstract}
+    An article usually includes an abstract, a concise summary of the work covered at length in the main body of the article. 
+\end{abstract}
+
+% \keywords
+% Use showkeys class option if keyword display desired
+
+\maketitle
+% \tableofcontents
+
+\textcolor{cyan}{\textbf{Introduction}}\par
+    {\color{red}
+    Antibubble is the twin brother of soap bubble. While bubble encases gas within a liquid shell, antibubble forms in soapy liquids and traps liquid within a spherical air shell. Naturally, its unusual configuration promises its unique applications, like ultrasound imaging, drug delivery, double emulsion and other possible areas \cite{Postema2018ultrasoundimaging,Postema2007drugdelivery,Silpe2013doubleemulsion}. But unlike the extensive research on bubbles, antibubbles are far less studied,  as there aren't so many efficient ways to generate antibubbles.\par
+    % The phenomenon was first reported by Hughes and Hughes\cite{} in 1932 and then named by Stong\cite{} in 1974. Here, we focus on the studies of its formation, which are few seen until this century\cite{}.\par
+    % cite 1:从《Dynamics……》一文学的，可以查了具体来源后写开头句
+    % cite 2:随处可见的Hughes发现一文
+    % cite 3:随处可见的Stong命名一文
+    % cite 4:白老师文章中有一串引用，可以试学。
+    % 省略号：综述文，借鉴嘉骏的PPT写
+    %% Naturally, its unusual configuration promises its unique properties and possible applications. 
+%% A bubble is a thin liquid film enclosing a gas pocket. Simple as it is, it plays numerous roles in kitchen cleaning, paper printing, chemical reaction and other possible areas.\\\cite{} Its physics are also well established.\\\cite{} Yet its 'twin-brother', antibubble, is a relatively new phenomenon.
+%% cite 1:从《Dynamics……》一文学的，可以查了具体来源后写开头句
+%% cite 2:从《Aging of an antibubble》和《Antibubbles: Factors that affect their stability》学来的，它们有不同的参考文献，需确认
+    % Antibubble formation, or generation, is a crucial and indispensable step for any antibubble studies. But it's quite astonishing that the ways to generate antibubbles are quite limited and deficient.
+    Traditional generation methods focus on horizontal liquid interfaces, like injecting a liquid column\cite{Kim2008liquidcolumns} or droplet pairs \cite{Song2020droppairs} directly onto a horizontal pool of soapy water, or through a thin soap film \cite{Zou2017liquidfilm}. Their common prerequisite is that the liquid had a We number ($\sim 10^2$) big enough to entrain air into the water. Yet their productivity is about 20\% from our lab due to the easy drainage of air film.\par
+    % The most classical and direct way is to have a liquid jet impact on the same liquid surface beneath and therefore entrain a gas layer into the reservoir, forming an antibubble.\cite{} A similar way is to use liquid drop pairs, which also create similar gas film to be entrained into the pool.\cite{} Besides, scientists might suspend a horizontal soap film right above the liquid bath and inject droplets to penetrate it. Under optimal parameters, this method will create packed droplets, whose outer liquid film will then merge will the bath, giving birth to an antibubble. \cite{}  There are also other ways like inducing coalescence of micro bubbles, using liquid marble and so on.\cite{}
+    A recent method generates antibubble through a natural convex interface \cite{Bai2016foammethod}, i.e., the upper node of the Plateau border (PB) [see Fig. 1(a)]. This structure will naturally seal more air, therefore putting off the drainage process. Here we've reached an unexpected productivity of about 80\%, with We mostly ($\sim 10$)!  Besides, we report that changing ambient air pressure might lead to unexpected drainage during antibubble formation. The dynamics of the generating process are revealed with theoretical analysis and scaling laws are proposed to determine different criteria for droplet entering and sliding through PB.\par
+   % Yet all those approaches had a serious problem in common: their productivity is about 20 percent out of all the cases, according to the trials in our lab. It's then a burning issue that we should improve the method. Lixin Bai. reported antibubble formation using a 'foam method' in 2016. It was about injecting droplets at the interface of the foams, which will wrap the droplet and transport it into the liquid bath to produce antibubbles. Yet Bai stopped at cinematography due to the difficulty of modelling. The randomness and singularity of bubbles mystified the system. Here we report a new approach to construct antibubble formation system, which will not only improve productivity but also bring the criteria of 'foam method' to light.
+    }
+
+\textcolor{cyan}{\textbf{Experimental Setup}}\par
+    {\color{black}
+    The experimental setup is schematically shown in Fig.1 and is briefly described below. A 3D-printed triangular prism frame (photosensitive resin, $a = 30\ {\rm mm}$ and $b = 45\ {\rm mm}$) is first dipped into a soap solution of density $\rho = 1.0 \times 10^3\ {\rm kg/m^3}$ and surface tension $\sigma = 30.2\ {\rm mN/m}$ (pendant drop method), composed of 5.6$\%$ wt of commercial detergent, 5.6$\%$ wt of glycerol and 88.8$\%$ wt of ultrapure water. When the frame is subsequently extracted and fixed vertically above the liquid pool, a well-defined PB ($w\approx 90\ {\rm \mu m}$, $l\approx 33.6\ {\rm mm}$, and $\alpha \approx 109.5^{\circ}$) forms instantly. We then inject droplets (radius $R = 1.0-2.2\ {\rm mm}$ equivalent with that of the same droplet volume as a sphere) of the same solution through a syringe pump from a distance $h$ right above the upper node of the PB. By varying $h$, a range of the impact velocity $u = 0.1-1.8\ {\rm m/s}$ of the droplet is \textcolor{red}{acquired. Besides, we place the whole setup into a vacuum box with ambient pressure $p = 0.1-1.0\ {\rm atm}$ }. The interaction between the droplet and the border is recorded by a high-speed camera (v711, Phantom, U.S.A.) with \textcolor{red}{3000 to 10000} frames per second from the side view.\par
+    }
+    % {\color{red}Experimental setup and procedure. Range of the parameter space, such as $h$ and $R$. Experiments under vacuum.}
+    % {\color{blue} To generate antibubbles efficiently, we use a soap solution of density $\rho = 1.0\ {\rm g/cm^3}$, composed of 5.6$\%$ wt of commercial detergent, 5.6$\%$ wt of glycerol and 88.8$\%$ wt of ultrapure water. The surface tension at the soap-air interface is $\sigma = 30.2\ {\rm mN/m}$ (pendant drop method).\par%Supplementary material required
+    % To form a well-shaped Plateau border, we build a 3D-printed triangular prism frame (photosensitive resin) of length $a =30\ {\rm mm}$ and side $b = 45\ {\rm mm}$ [see Fig. 1(a)]\cite{}. After it is dipped into the reservoir to form the soap films, the frame is placed vertically in the mid-air and connected to the holder. At this moment, the border between the films above has a width of $w\approx 90\ {\rm \mu m}$ [see Fig. 1(b)] and the Plateau border has a length of $l\approx 33.6\ {\rm mm}$; they share an angle $\alpha \approx 109.5^{\circ}$ [see Fig. 1(c)]. Shortly Afterwards, we inject droplets of the same solution (radius $R = 1.0-2.2\ {\rm mm}$ equivalent with that of the same droplet volume as a sphere) using syringe pump and the needle is fixed right above the upper-node of the Plateau border. The distance \emph{h} between the needle and the node varies and therefore the impact velocity of the droplets ranges between 0.1 m/s and 1.8 m/s. Besides, the antibubble generating process is recorded with a high-speed camera (?) from the side view.}
+    % 几个待解决的问题：1.node上方边界的名称?Secondary PB？Simply Border？；2.是描述框从池子里出来，还是池子自己下降？我们的实验图里面暂时没有升降台；3.真空试验机和台架如何添加到图1中？
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.5\linewidth,scale=1.00]{Figures/Figure1 20230912.pdf}
+		\caption{Experimental configuration and notation \textcolor{red}{(The vacuum box is omitted)}. (a) Schematic of the experimental setup. (b) Top view of the upper-node of the Plateau border. (c) Photo of the test apparatus from side view.}
+		\label{fig:setup}
+	\end{center}
+\end{figure}
+%   (a) Triangular prism frame supporting the Plateau border (PB). The droplet is vertically injected at the node along the dash and falls into the main PB; (b) Top view of the node above the PB. The three channels between the film share the same width of \emph{w}; (c) Experimental configuration (side view) and notation.
+%   \color{red}(Can we reduce the size of the figure. Now it is a bit too large.)}}
+
+\textcolor{cyan}{\textbf{Results and discussion}}\par
+    {\color{black}
+    Fig.2 shows three typical behaviours of droplets with different impact velocity $u$ and radius $R$. Here $t = 0$ indicates the time at which each droplet \textcolor{blue}{begins to deform} the soap film. When $u$ and $R$ are relatively low, the droplet may coalesce with the soap film above or even bounce back, leading to \textcolor{blue}{results named(delete???)} "outer coalescence"(Fig.2(b), $R = 1.13\ {\rm mm}$, $u = 0.40\ {\rm m/s}$, 33). When $u$ or $R$ increases to some extent, the droplet will be able to \textcolor{blue}{pass through(penetrate???)} the upper node of the PB. Basing on the maintenance or collapse of the air film in the multi-layer structure after pinch-off, the last two categories are named "packing" (Fig.2(a), $ R = 1.75\ {\rm mm}$, $u = 0.18\ {\rm m/s}$,    44) and "inner coalescence" (Fig.2(c), $R = 1.16\ {\rm mm}$, $u = 0.43\ {\rm m/s}$, 24).\par
+    In the case of "packing", the droplet gains enough velocity after free fall and therefore successfully deform the film into a pocket without bouncing or coalescence. The concavity of the film structure helps the droplet to entrap air from both above and below. This pocket then pinches off ($ t = 26.7\ {\rm ms}$), forming a stable multi-layer structure (1G1L, i.e. one gas film plus one liquid film)\cite{} at the top of the PB. The droplet then transports in the PB under gravity and \textcolor{blue}{shows} a shape oscillation due to capillary waves caused by the impact. When the droplet falls to the bottom of the PB, the lower node opens and a packed droplet with a thin air layer (see the enlarged snapshot) is separated. An antibubble is then formed when the packed droplet impacts onto the soap solution below; see Fig.2(d).\cite{}.\par % 前：白老师；后：邹老师
+    With relatively less $u$ or $R$, droplets of other two categories will exhibit similar behaviours except for their \textcolor{blue}{destinies}. The air gap in between will collapse either before or after pinch-off, finally leading to the coalescence between droplets and the film; see Fig.2(b)-(c). These cases will leave no packed droplets to impact onto the soap solution, and hence no antibubbles will emerge. So it's important to find a parameter within which we can generate antibubbles through a well-shaped PB.
+    % All the cases that the droplet does not totally pass through the upper node are counted as one category named as "bouncing or outer coalescence". Correspondingly, cases that the droplet passes through the upper node are categorised basing on the maintenance or collapse of the air film in the multi-layer structure (as indicated in Fig.2.(a).(5)), which we call "packing" and "inner coalescence".
+    % The most typical result are named "packing" since a multi-layer structure is formed and antibubble formation is eased. Droplets with less velocities and radii would otherwise fail to form the structure and the air film in between might collapse before or after the pinch-off, which we call "Outer coalescence" and "Inner Coalescence". For the case in Fig.2(a), the droplet has a 
+    % $t = 0$ indicates the time at which the droplet in each case begins to deform the soap film. After an optimal height of free fall, the droplet gains enough velocity to deform the film into a pocket. Note that insufficient velocities and radii would lead to coalescence; see Fig.2(b). The concavity of the film structure helps the droplet to entrap air both above and below. This pocket then pinches off at the top ($ t = 26.33\ {\rm ms}$), forming a multi-layer structure (One gas film plus one liquid film) at the top of the Plateau border. Again insufficient We and Bd number (indicating velocity and radius) would lead to the collapse of the air film; see Fig.2(c). The droplet then transports in the PB under gravity and oscillate simultaneously due to capillary waves caused by the impact. When the droplet falls to the bottom of the Plateau border, the lower node opens and a packed droplet with a thin air layer is separated. An antibubble is then formed when the packed droplet impacts onto the soap solution below; see Fig.2(d). 
+    }
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth ,scale=1.00]{Figures/Figure2 20231117.pdf}
+		\caption{Image sequences showing three typical behaviours of droplets with different impact velocity $u$ and radius $R$ for (a) "Packing", $ R = 1.75\ {\rm mm}$, $u = 0.18\ {\rm m/s}$ and $We = 1.94$ ; (b) "Outer coalescence", $R = 1.13\ {\rm mm}$, $u = 0.40\ {\rm m/s}$; (c) "Inner coalescence", $R = 1.16\ {\rm mm}$, $u = 0.43\ {\rm m/s}$; (d) Antibubble formation after the droplet passes through the Plateau border. $R = ?\ {\rm mm}$, $u = ?\ {\rm m/s}$.}%将修改
+        \label{fig:phenomenon}
+	\end{center}
+\end{figure}
+%   Only the wrapping process are shown here for the last three cases so as to emphasise the different results brought by $R$ and $u$.
+%   and results for (a) case A,$ R = 1.75\ {\rm mm}$, $u = 0.18\ {\rm m/s}$ and $We = 1.94$ ; (b) case B, $R = 1.90\ {\rm mm}$, $u = 0.37\ {\rm m/s}$; (c) case C, $R = 1.13\ {\rm mm}$, $u = 0.37\ {\rm m/s}$; (d) case D, $R = 1.13\ {\rm mm}$, $u = 0.40\ {\rm m/s}$
+%   可改方向：换右边三注释，全写为Wrapping at the node，之后再在图内标coalescence
+
+\textcolor{cyan}{\textbf{Conclusions}}\par
+{\color{black}
+    We also found that the PB micro channel is capable of transporting other kinds of liquids, which might give rise to the development of drug delivery industry.
+}
+
+\begin{acknowledgements}
+	We gratefully acknowledge insightful discussions and helpful suggestions from H.~A.~Stone, C.~Sun and L.~Bai. We acknowledge support on fluid data provided by Y.~Y.~Duan. We acknowledge financial support by the National Natural Science Foundation of China (NSFC, No. 52076120 and No. 52079066), the State Key Laboratory of Hydroscience and Engineering (2019-KY-04, sklhse-2020-E-03, and sklhse-2020-E-05), the Creative Seed Fund of Shanxi Research Institute for Clean Energy, Tsinghua University, and the China Postdoctoral Science Foundation (2022M711766).
+\end{acknowledgements}
+
+\bibliography{Antibubble_Library}% Produces the bibliography via BibTeX.
+\end{document}
+%
+% ****** End of file apssamp.tex ******

@@ -1,0 +1,54 @@
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.idea/
+.vscode/
+
+# Raw & processed experimental data (large TIF/AVI files)
+raw_data/
+processed_data/
+
+# Agent workspace (auto-generated)
+agent_workspace/
+
+# Dashboard auto-generated cache
+dashboard/dashboard_data.json
+
+# Log files
+*.log
+
+# Large binary presentations (>50MB, use cloud storage)
+*.pptx
+
+# Zotero internal file storage (exported .bib is enough)
+library/zotero_library.bib/
+
+# Excel files (binary, use cloud storage)
+*.xlsx
+
+# OS junk
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg

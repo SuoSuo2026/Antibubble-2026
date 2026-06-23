@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Antibubble 科研工作台</title>
+    <link rel="stylesheet" href="./styles.css?v=20260608-phase-ppt-2" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Local Research Dashboard</p>
+        <h1>Antibubble 科研工作台</h1>
+      </div>
+      <div class="actions">
+        <button id="rebuildBtn" type="button">重新扫描</button>
+        <button id="exportSwitchesBtn" type="button">导出开关</button>
+      </div>
+    </header>
+
+    <nav class="page-tabs" aria-label="看板分页">
+      <button class="page-tab active" data-page="console" type="button">总控台</button>
+      <button class="page-tab" data-page="showcase" type="button">展示汇报</button>
+      <button class="page-tab" data-page="literature" type="button">文献调研</button>
+      <button class="page-tab" data-page="cases" type="button">数据处理</button>
+      <button class="page-tab" data-page="phase" type="button">结果相图</button>
+      <button class="page-tab" data-page="manuscript" type="button">文章撰写</button>
+    </nav>
+
+    <main>
+      <section class="page active" data-page-panel="console">
+        <section class="paper-progress-panel" id="paperProgressPanel"></section>
+        <section class="metrics" aria-label="总体状态">
+          <div class="metric"><span id="caseCount">0</span><label>Cases</label></div>
+          <div class="metric"><span id="processedCount">0</span><label>已处理</label></div>
+          <div class="metric"><span id="runCount">0</span><label>处理版本</label></div>
+          <div class="metric"><span id="topCase">-</span><label>当前最高分</label></div>
+        </section>
+        <section class="console-grid">
+          <section class="memo-card" id="memoPanel"></section>
+          <section class="history-card" id="historyPanel"></section>
+          <section class="memo-card" id="consoleResearchPanel"></section>
+          <section class="history-card" id="consoleWritingPanel"></section>
+        </section>
+      </section>
+
+      <section class="page" data-page-panel="showcase">
+        <section class="showcase-page" id="showcasePanel"></section>
+      </section>
+
+      <section class="page" data-page-panel="literature">
+        <section class="literature-page" id="literaturePanel"></section>
+      </section>
+
+      <section class="page" data-page-panel="cases">
+        <section class="data-agent-desk" id="dataAgentDesk"></section>
+        <section class="control-band">
+          <div class="search">
+            <label for="searchInput">搜索 Case</label>
+            <input id="searchInput" type="search" placeholder="例如 0415-26 或 freefall" />
+          </div>
+          <div class="filters" role="group" aria-label="状态筛选">
+            <button class="filter active" data-status="all" type="button">全部</button>
+            <button class="filter" data-status="processed" type="button">已完成</button>
+            <button class="filter" data-status="needs_review" type="button">待复核</button>
+            <button class="filter" data-status="raw_only" type="button">未处理</button>
+            <button class="filter" data-status="paused" type="button">暂停</button>
+          </div>
+        </section>
+        <section class="legend" aria-label="图例">
+          <span><i class="legend-swatch rigid"></i>黄色：颗粒/硬小球</span>
+          <span><i class="legend-swatch droplet"></i>蓝色：液滴/液膜类</span>
+          <span><i class="legend-line"></i>绿色条：Franklin 评分</span>
+        </section>
+        <section class="layout">
+          <div><div id="caseGrid" class="case-grid"></div></div>
+          <aside class="detail" id="detailPanel">
+            <p class="empty">选择一个 Case 查看产物、评分、Eureka 观察和相图数据。</p>
+          </aside>
+        </section>
+      </section>
+
+      <section class="page" data-page-panel="phase">
+        <section class="phase-card" id="phasePanel"></section>
+      </section>
+
+      <section class="page" data-page-panel="manuscript">
+        <section class="manuscript-page" id="manuscriptPanel"></section>
+      </section>
+    </main>
+
+    <dialog id="switchDialog">
+      <form method="dialog">
+        <h2>当前处理开关 JSON</h2>
+        <textarea id="switchExport" readonly></textarea>
+        <menu>
+          <button value="close">关闭</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="./app.js?v=20260608-phase-ppt-2"></script>
+  </body>
+</html>

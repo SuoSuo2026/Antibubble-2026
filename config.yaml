@@ -1,0 +1,99 @@
+﻿data:
+  tiff_path: "D:/Program Files (x86)/202604Antibubble/raw_data/0415_exhibition/0415-17star_MB voyager.tif"
+  output_dir: "D:/Program Files (x86)/202604Antibubble/processed_data/0415-17star_MB_voyager/0415-17star_MB_voyager_group_meeting"
+
+roi:
+  x: 0
+  y: 100
+  w: 1920
+  h: 360
+
+experiment:
+  fps: 2000.0
+  pixel_per_mm: 25.533333333333335
+  mm_per_pixel: 0.0391644908616188
+  valid_frame_range: [200, 315]
+  motion_axis: "x"
+  use_axisymmetric_volume_centroid: false
+
+preprocess:
+  background_sample_count: 25
+  threshold_mode: "otsu"
+  manual_threshold: 25
+  morph_kernel_size: 5
+
+tracking:
+  min_area: 80
+  min_main_area: 1200
+  edge_margin: 15
+  max_center_jump: 120
+  max_backward_jump_x: 20
+  max_area_ratio_change: 2.5
+  min_area_ratio_change: 0.4
+  refine_thin_connections: true
+  refine_min_distance_px: 6.5
+  refine_dilate_size: 7
+  refine_clip_to_original: true
+  refine_final_erode_px: 5
+
+kinematics:
+  smooth_window: 9
+  centroid_sigma_px: 0.8
+  fps_rel_error: 0.0001
+  core_time_range: [0.035, 0.085]
+
+fit:
+  quad_fit_time_range: [0.035, 0.085]
+  fit_smooth_windows: [7, 9, 11]
+  fit_time_windows:
+    - [0.036, 0.084]
+    - [0.038, 0.082]
+    - [0.040, 0.080]
+
+oscillation:
+  geom_analysis_time_range: [0.035, 0.085]
+  acc_fft_time_range: [0.035, 0.085]
+  lowpass_cutoff_hz: 10.0
+  use_quad_osc_fit: true
+  shape_freq_hz: 39.604
+  use_freq_scan: true
+  freq_scan_range: [20.0, 80.0]
+  freq_scan_num: 1201
+  use_quad_osc_harmonic_fit: true
+
+visualization:
+  save_plots: true
+  preview_sample_count: 6
+  dpi: 200
+
+video_export:
+  enabled: true
+
+  filename: "0415-17star_MB_voyager_group_meeting_monitor.mp4"
+  codec: "mp4v"
+  fps_out: 30.0
+
+  frame_range_mode: "valid"   # "valid" 或 "all"
+  crop_to_roi: true
+
+  show_time_text: true
+  time_text_unit: "ms"
+  time_text_x: 20
+  time_text_y: 30
+
+  show_scale_bar: true
+  scale_bar_mm: 5.0
+  scale_bar_x: 30
+  scale_bar_y: 260
+  scale_bar_thickness: 3
+  scale_bar_text_gap: 8
+
+  show_centroid: true
+  centroid_radius: 4
+  show_bbox: true
+  show_trajectory: true
+  trajectory_length: 25
+
+  font_scale: 0.7
+  font_thickness: 2
+
