@@ -1,0 +1,75 @@
+{
+  "sections": {
+    "introduction": {
+      "status": "draft",
+      "word_count": 542,
+      "generated_at": "2026-06-23T16:50:28",
+      "reviewed": false,
+      "rules_check": {
+        "R1_data_fidelity": true,
+        "R2_literature_grounding": true,
+        "R3_blank_policy": true,
+        "R4_prl_concison": true,
+        "R5_dual_model": true,
+        "R6_terminology": true
+      }
+    },
+    "methods": {
+      "status": "draft",
+      "word_count": 638,
+      "generated_at": "2026-06-23T16:51:25",
+      "reviewed": false,
+      "rules_check": {
+        "R1_data_fidelity": true,
+        "R2_literature_grounding": true,
+        "R3_blank_policy": true,
+        "R4_prl_concison": true,
+        "R5_dual_model": "Rigid sphere mentioned as control in final paragraph",
+        "R6_terminology": true
+      }
+    },
+    "results": {
+      "status": "draft",
+      "word_count": 1359,
+      "generated_at": "2026-06-23T16:56:05",
+      "reviewed": false,
+      "rules_check": {
+        "R1_data_fidelity": true,
+        "R2_literature_grounding": true,
+        "R3_blank_policy": true,
+        "R4_prl_concison": false,
+        "R5_dual_model": "Rigid-sphere comparison in final paragraph as validation",
+        "R6_terminology": true
+      }
+    },
+    "conclusions": {
+      "status": "draft",
+      "word_count": 424,
+      "generated_at": "2026-06-23T16:57:01",
+      "reviewed": false,
+      "rules_check": {
+        "R1_data_fidelity": true,
+        "R2_literature_grounding": true,
+        "R3_blank_policy": true,
+        "R4_prl_concison": false,
+        "R5_dual_model": true,
+        "R6_terminology": true
+      }
+    },
+    "abstract": {
+      "status": "draft",
+      "word_count": 210,
+      "generated_at": "2026-06-23T16:57:01",
+      "reviewed": false,
+      "rules_check": {
+        "R1_data_fidelity": true,
+        "R2_literature_grounding": true,
+        "R3_blank_policy": true,
+        "R4_prl_concison": true,
+        "R5_dual_model": true,
+        "R6_terminology": true
+      }
+    }
+  },
+  "updated_at": "2026-06-23T16:57:01"
+}

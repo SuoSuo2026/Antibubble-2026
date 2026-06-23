@@ -1,0 +1,58 @@
+[
+  {
+    "fig_num": 1,
+    "label": "Experimental setup and PB frame",
+    "thesis_figs": [
+      "Figure 2.4",
+      "Figure 2.2"
+    ],
+    "files": [
+      "figure_021.png",
+      "figure_023.png"
+    ],
+    "section": "methods",
+    "caption": "Experimental configuration. (a) Schematic of the PB-based antibubble generation apparatus including the 3D-printed triangular-prism frame, syringe pump, liquid pool, high-speed camera, and backlight. (b) Top view of the upper PB node showing the three converging soap films (width w = 90 um, angle = 109.5 deg). (c) Photograph of the setup enclosed in the vacuum chamber."
+  },
+  {
+    "fig_num": 2,
+    "label": "Droplet-PB interaction stages and outcomes",
+    "thesis_figs": [
+      "Figure 3.1",
+      "Figure 3.2"
+    ],
+    "files": [
+      "figure_004.png",
+      "figure_003.png"
+    ],
+    "section": "results",
+    "caption": "Image sequences of droplet-PB interaction. (a) The four universal stages: free fall, entering the PB at the upper node, transport within the PB channel, and release as a packed droplet. The 1G1L multi-layer structure forms at pinch-off (t = 26.7 ms). (b)-(d) Three typical outcomes: (b) Packing (multi-layer formation), (c) Outer coalescence (film rupture before pinch-off), (d) Inner coalescence (collapse during transport)."
+  },
+  {
+    "fig_num": 3,
+    "label": "We-Bo phase diagram",
+    "thesis_figs": [
+      "Figure 3.4",
+      "Figure 3.5"
+    ],
+    "files": [
+      "figure_098.png",
+      "figure_093.png"
+    ],
+    "section": "results",
+    "caption": "We-Bo phase diagram. (a) All 199 experiments at atmospheric pressure. The criterion We + 2Bo = 0.038 (solid line) separates packing outcomes (filled circles, above the line) from insufficient deformation (open triangles, below). The dashed line shows the equivalent criterion for the horizontal liquid-film method (We + 2Bo = 0.072). (b) Experiments with varying ambient pressure P = 0.1-1.0 atm, showing the emergence of pressure-dependent failures (blue circle) not captured by the energy criterion alone."
+  },
+  {
+    "fig_num": 4,
+    "label": "t/t criterion and combined phase diagram",
+    "thesis_figs": [
+      "Figure 3.8",
+      "Figure 3.7"
+    ],
+    "files": [
+      "figure_071.png",
+      "figure_090.png"
+    ],
+    "section": "results",
+    "caption": "Characteristic time ratio criterion. (a) Schematic of the gas film between the droplet and the deforming soap film in polar coordinates. Lubrication theory applies because the film thickness (epsilon ~ 10 um) is much smaller than the droplet radius (R ~ 1 mm). (b) Combined phase diagram in (We + 2Bo, t_p/t_d) space. The white region satisfies both the We-Bo energy criterion and the t/t drainage criterion, containing 97% of all successful packing outcomes."
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "skills": {
+    "write-section": {
+      "description": "Write or rewrite a paper section in PRL-style English from Chinese graduation thesis, with Eureka literature and Quill draft integration",
+      "path": ".claude/skills/write-section.md"
+    },
+    "paper-review": {
+      "description": "Review paper sections against mandatory writing rules: data fidelity, literature grounding, terminology, PRL style, completeness, narrative structure",
+      "path": ".claude/skills/paper-review.md"
+    },
+    "paper-sync": {
+      "description": "Synchronize all paper data sources: dashboard, Eureka corpus, Quill draft, and Zotero literature",
+      "path": ".claude/skills/paper-sync.md"
+    },
+    "paper-compile": {
+      "description": "Compile all reviewed sections into final Manuscript_filled.tex with LaTeX verification and bibliography resolution",
+      "path": ".claude/skills/paper-compile.md"
+    }
+  }
+}

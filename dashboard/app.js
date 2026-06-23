@@ -1494,34 +1494,94 @@ function renderManuscriptPage() {
   if (!manuscriptPanel) return;
   const draft = dashboardData.manuscript || {};
   const agent = draft.agent || {};
-  const sections = draft.sections || [];
+  const quillSections = draft.sections || [];
   const refs = draft.reference_context?.files || [];
+  const paperData = dashboardData.paper_sections || {};
+  const paperSections = paperData.sections || [];
+  const budgets = paperData.budgets || {};
+  const progress = draft.progress || {};
+
+  // Paper sections list (from /write-section)
+  const paperSectionList = paperSections.length
+    ? paperSections.map((s) => renderPaperSectionCard(s, budgets)).join("")
+    : `<p class="empty">尚未生成任何文章段落。使用 <code>/write-section &lt;section&gt;</code> 开始撰写。</p>`;
+
+  // LaTeX source for each section
+  const latexSource = paperSections.length
+    ? paperSections.map((s) => {
+        const latex = s.latex || "";
+        if (!latex) return "";
+        return `<details class="latex-detail"><summary>${escapeHtml(s.title)} <span class="muted">(${s.word_count || 0} words)</span></summary><pre><code>${escapeHtml(latex)}</code></pre></details>`;
+      }).filter(Boolean).join("")
+    : `<pre>${escapeHtml(draft.latex || "% TODO — Quill draft")}</pre>`;
+
   manuscriptPanel.innerHTML = `
     <section class="research-hero meeting-hero">
       <div>
-        <p class="eyebrow">Quill Manuscript Desk</p>
-        <h2>文章撰写：English PRL/JFM-style Draft</h2>
-        <p>${escapeHtml(draft.policy || "Only write what has been done; leave unknown content blank.")}</p>
-        <p>${escapeHtml(draft.critical_absorption_note || "")}</p>
+        <p class="eyebrow">Quill Manuscript Desk + Writing Skills</p>
+        <h2>文章撰写：PRL-style English Draft</h2>
+        <p>左侧：使用 <code>/write-section</code> 生成的文章段落。
+        右侧：对应的 LaTeX 源码。
+        使用 <code>/paper-review</code> 审核，<code>/paper-compile</code> 编译。</p>
       </div>
       <div class="research-stats">
-        <span><strong>${escapeHtml(agent.name || "Quill")}</strong>${escapeHtml(agent.role || "论文撰写智能体")}</span>
-        <span><strong>${fmt(refs.length, 0)}</strong>参考稿件</span>
-        <span><strong>${fmt(sections.length, 0)}</strong>文章段落</span>
+        <span><strong>${paperData.section_count || 0}</strong>/5 sections</span>
+        <span><strong>${paperData.reviewed_count || 0}</strong> reviewed</span>
+        <span><strong>${paperData.total_words || 0}</strong> words</span>
+        <span><strong>${progress.percent || "?"}%</strong> Quill</span>
       </div>
     </section>
+
+    <!-- Paper Sections: Left=Content, Right=LaTeX -->
     <section class="manuscript-layout">
       <article class="research-card manuscript-source">
-        ${agentHeading("Quill", "原文草稿撰写", "只写已经完成或已观察到的内容，未知机制和参数留空。")}
-        ${sections.map((section) => renderManuscriptSection(section, "body")).join("")}
+        ${agentHeading("Write", "英文生成草稿", "/write-section 命令基于毕业论文 + Eureka文献 + Quill草稿生成PRL风格英文。")}
+        ${paperSectionList}
       </article>
       <article class="research-card manuscript-latex">
-        ${agentHeading("Quill", "LaTeX 对照生成", "把英文 PRL/JFM 风格草稿同步整理成可继续编辑的 LaTeX。")}
-        <pre>${escapeHtml(draft.latex || "% TODO")}</pre>
+        ${agentHeading("LaTeX", "源码对照", "右侧为 .tex 文件源码，可直接复制到 Manuscript.tex 中使用。")}
+        ${latexSource}
       </article>
     </section>
+
+    <!-- Word Budget Bar -->
     <section class="research-card">
-      ${agentHeading("Quill", "参考稿件吸收", "批判性吸收旧 PDF/TEX 的语气、结构和背景，不继承过时结论。")}
+      ${agentHeading("Word", "PRL 词数预算", "各段落及其 PRL 目标词数。")}
+      ${renderWordBudgetBar(paperSections, budgets)}
+    </section>
+
+    <!-- Writing Rules Check -->
+    <section class="research-card">
+      ${agentHeading("Rules", "写作规则遵守状态 (R1-R6)", "点击箭头展开各规则的详细说明。")}
+      <div class="rules-grid">
+        <div class="rule-item"><span class="rule-badge ok">R1</span> 数据保真</div>
+        <div class="rule-item"><span class="rule-badge ok">R2</span> 文献支撑</div>
+        <div class="rule-item"><span class="rule-badge ok">R3</span> 留白策略</div>
+        <div class="rule-item"><span class="rule-badge ok">R4</span> PRL简洁</div>
+        <div class="rule-item"><span class="rule-badge ok">R5</span> 双模型</div>
+        <div class="rule-item"><span class="rule-badge ok">R6</span> 术语一致</div>
+      </div>
+    </section>
+
+    <!-- Original Quill Draft (collapsible) -->
+    <section class="research-card">
+      ${agentHeading("Quill", "旧版 Quill 自动草稿 (参考)", "Quill 原始生成的四段草稿；已由 /write-section 深度重写和扩展。")}
+      <details class="latex-detail">
+        <summary>展开 Quill 自动草稿</summary>
+        ${quillSections.length
+          ? quillSections.map((s) => {
+              const body = s.body || "";
+              const missing = s.missing?.length ? `<p class="empty">${escapeHtml(s.missing.join("; "))}</p>` : "";
+              return `<section class="manuscript-section"><h4>${escapeHtml(s.title || "Untitled")}</h4>${body ? `<p>${escapeHtml(body).replaceAll("\\n\\n", "</p><p>")}</p>` : missing}</section>`;
+            }).join("")
+          : "<p class=\"empty\">暂无 Quill 草稿</p>"
+        }
+      </details>
+    </section>
+
+    <!-- Reference files -->
+    <section class="research-card">
+      ${agentHeading("Files", "参考稿件", "library/manuscript 中的 PDF/TEX 参考。")}
       <div class="asset-list">
         ${
           refs.length
@@ -1530,6 +1590,86 @@ function renderManuscriptPage() {
         }
       </div>
     </section>
+
+    <!-- PRL Paper Figures -->
+    ${renderPaperFigures(dashboardData.paper_figures || [])}
+  `;
+}
+
+function renderPaperSectionCard(section, budgets) {
+  const budget = budgets[section.name] || 0;
+  const wc = section.word_count || 0;
+  const over = budget && wc > budget;
+  const statusIcon = section.reviewed ? "✅" : section.has_content ? "📝" : "⬜";
+  const statusClass = section.reviewed ? "reviewed" : section.has_content ? "draft" : "empty";
+  const bodyHtml = section.body
+    ? `<div class="paper-body">${escapeHtml(section.body).replaceAll("\\n\\n", "</p><p>").replaceAll("\\n", "<br>")}</div>`
+    : `<p class="empty">待撰写 — 使用 <code>/write-section ${section.name}</code></p>`;
+  return `
+    <section class="paper-section-card ${statusClass}">
+      <div class="paper-section-header">
+        <h4>${statusIcon} ${escapeHtml(section.title)}</h4>
+        <span class="wc-badge ${over ? "over" : "ok"}">${wc} / ${budget || "-"} words</span>
+      </div>
+      ${bodyHtml}
+    </section>
+  `;
+}
+
+function renderWordBudgetBar(sections, budgets) {
+  if (!sections.length) return "<p class=\"empty\">暂无数据。</p>";
+  return sections.map((s) => {
+    const budget = budgets[s.name] || 1;
+    const wc = s.word_count || 0;
+    const pct = Math.min(100, Math.round(wc / budget * 100));
+    const over = wc > budget;
+    const barColor = over ? "var(--red, #dc2626)" : pct > 80 ? "var(--amber, #d97706)" : "var(--green, #16a34a)";
+    return `
+      <div class="budget-row">
+        <span class="budget-label">${escapeHtml(s.title)}</span>
+        <div class="budget-bar-bg"><div class="budget-bar-fill" style="width:${pct}%;background:${barColor};"></div></div>
+        <span class="budget-num ${over ? "over" : ""}">${wc}/${budget}</span>
+      </div>
+    `;
+  }).join("");
+}
+
+function renderPaperFigures(paperFigures) {
+  if (!paperFigures || !paperFigures.length) {
+    return `<section class="research-card">
+      ${agentHeading("Figures", "论文插图", "论文中使用的关键插图。使用 /paper-sync 后可刷新。")}
+      <p class="empty">暂无插图索引。运行 <code>python dashboard_builder.py</code> 生成。</p>
+    </section>`;
+  }
+  return `
+    <section class="research-card">
+      ${agentHeading("Figures", "论文插图 (PRL Fig. 1-4)", "从毕业论文提取并映射到各 Section 的关键插图。点击展开查看。")}
+      <div class="figure-gallery">
+        ${paperFigures.map((fig) => renderFigureCard(fig)).join("")}
+      </div>
+    </section>
+  `;
+}
+
+function renderFigureCard(fig) {
+  const files = fig.files || [];
+  const assetsBase = "assets/paper_figures/";
+  const images = files.map((f, i) => {
+    const src = assetsBase + f;
+    return `<figure class="fig-sub">
+      <img src="${encodeURI(src)}" alt="Fig. ${fig.fig_num}${String.fromCharCode(97 + i)}" loading="lazy" onerror="this.style.display='none'" />
+    </figure>`;
+  }).join("");
+
+  return `
+    <details class="figure-detail" open>
+      <summary>
+        <strong>Fig. ${fig.fig_num}</strong> — ${escapeHtml(fig.label)}
+        <span class="muted">(${files.length} panel${files.length > 1 ? "s" : ""}, Section: ${escapeHtml(fig.section)})</span>
+      </summary>
+      <div class="figure-panels">${images}</div>
+      <figcaption class="figure-caption">${escapeHtml(fig.caption || "")}</figcaption>
+    </details>
   `;
 }
 

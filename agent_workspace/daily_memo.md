@@ -1,0 +1,14 @@
+- 2026-05-28：今日处理硬小球与液膜相互作用录像，重点关注小球识别与左侧液体运动干扰。
+- 主要问题：左侧液体仍在运动，旧逻辑会把液体边界或反光点误判成固体小球。
+- 已做修正：Franklin 对半径突变、质心突变、边界假目标和左侧液体污染加大惩罚。
+- 今日重跑：20_PP_multi、10_POM_multi、15_PMMA_multi 已切换到更保守的 ROI/Vfr 结果。
+- 待复核：15_PMMA_multi 的有效窗口较短，建议人工确认后再进入最终完成状态。
+- 2026-06-03：Zotero 已作为 Eureka 底层文献消化库接入，当前解析 213 条去重文献、86 条 2020+ 文献、179 条 DOI 和 211 个本地 PDF；文献页新增 Zotero Digest 模块，但不自动污染主文献雷达。
+- 2026-06-04：@Zotero 插件已连通 Zotero Desktop local API，当前由插件导出 215 条 BibTeX、16 个原始分类和 225 条 inventory；Eureka 在 Zotero 部分降级为整理 digest 与主题簇，不再直接承担读库工作。
+- 2026-06-04：Quill Session Refresh 已运行；触发=first_project_session；当前 16 Cases / 12 已处理 / Zotero 213 条。
+- 2026-06-04：Quill Session Refresh 已运行；触发=无实质变化；当前 16 Cases / 12 已处理 / Zotero 213 条。
+- 2026-06-04：Quill Session Refresh 已运行；触发=dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。
+- 2026-06-07：Quill Session Refresh 已运行；触发=processed_changed, dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。
+- 2026-06-08：Quill Session Refresh 已运行；触发=dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。
+- 2026-06-18：Quill Session Refresh 已运行；触发=dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。
+- 2026-06-23：Quill Session Refresh 已运行；触发=dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。

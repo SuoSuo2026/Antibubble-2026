@@ -1,0 +1,296 @@
+[
+  {
+    "thesis_fig": "Figure unknown",
+    "path": "dashboard/assets/paper_figures/figure_054.png",
+    "section": "appendix",
+    "caption_cn": "综 合 论 文 训 练"
+  },
+  {
+    "thesis_fig": "Figure unknown",
+    "path": "dashboard/assets/paper_figures/figure_053.jpeg",
+    "section": "appendix",
+    "caption_cn": "摘    要"
+  },
+  {
+    "thesis_fig": "Figure 1.1",
+    "path": "dashboard/assets/paper_figures/figure_042.png",
+    "section": "introduction",
+    "caption_cn": "图1.1 气泡（左）与反气泡（右）的结构图示。图中给出了二者及其膜结构的常见尺度，及表面活性剂的头尾关系。[2]"
+  },
+  {
+    "thesis_fig": "Figure 1.2",
+    "path": "dashboard/assets/paper_figures/figure_041.png",
+    "section": "introduction",
+    "caption_cn": "图1.2 反气泡照片。[4]"
+  },
+  {
+    "thesis_fig": "Figure 1.3",
+    "path": "dashboard/assets/paper_figures/figure_039.png",
+    "section": "introduction",
+    "caption_cn": "图1.3 （a）气泡和反气泡的半径-时间，频率谱图像。可见反气泡的振动更加剧烈，特征谱线更明显[26]；（b）透明管道的谐波亮度扫描，显影剂分别为气泡（左），反气泡（右）。可以发现反气泡显影能够体现管道形状，效果更好。[20]"
+  },
+  {
+    "thesis_fig": "Figure 1.4",
+    "path": "dashboard/assets/paper_figures/figure_038.png",
+    "section": "introduction",
+    "caption_cn": "图1.4 磁性核反气泡运动时序图。图中a至d反映了不同时刻反气泡的位置，下为磁铁。[19]"
+  },
+  {
+    "thesis_fig": "Figure 1.5",
+    "path": "dashboard/assets/paper_figures/figure_037.png",
+    "section": "introduction",
+    "caption_cn": "图1.5 空间站失重环境下的“反气泡”，由于不受重力，其气膜分布更均匀。"
+  },
+  {
+    "thesis_fig": "Figure 1.6",
+    "path": "dashboard/assets/paper_figures/figure_036.png",
+    "section": "introduction",
+    "caption_cn": "图1.6 提出科学问题的思路"
+  },
+  {
+    "thesis_fig": "Figure 1.7",
+    "path": "dashboard/assets/paper_figures/figure_035.png",
+    "section": "introduction",
+    "caption_cn": "图 1.7 皮克林制备法示意图。（a）液石的显微照片；（b）液石产生反气泡示意。37[23]"
+  },
+  {
+    "thesis_fig": "Figure 1.8",
+    "path": "dashboard/assets/paper_figures/figure_034.png",
+    "section": "introduction",
+    "caption_cn": "图 1.8 双重乳化制备反气泡的流程图。[22]"
+  },
+  {
+    "thesis_fig": "Figure 1.9",
+    "path": "dashboard/assets/paper_figures/figure_033.png",
+    "section": "introduction",
+    "caption_cn": "图 1.9 超声制备反气泡示意图。核心步骤是形成封装液滴。[9]"
+  },
+  {
+    "thesis_fig": "Figure 1.10",
+    "path": "dashboard/assets/paper_figures/figure_032.png",
+    "section": "introduction",
+    "caption_cn": "图1.10 “滴落法”的反气泡生成时序图。图中右下角制得了反气泡。[6]"
+  },
+  {
+    "thesis_fig": "Figure 1.11",
+    "path": "dashboard/assets/paper_figures/figure_031.png",
+    "section": "introduction",
+    "caption_cn": "图1.11 “液膜法”的反气泡生成时序图。图中右下角制得了反气泡。[7]"
+  },
+  {
+    "thesis_fig": "Figure 1.11",
+    "path": "dashboard/assets/paper_figures/figure_030.png",
+    "section": "introduction",
+    "caption_cn": "图1.11 “液膜法”的反气泡生成时序图。图中右下角制得了反气泡。[7]"
+  },
+  {
+    "thesis_fig": "Figure 1.12",
+    "path": "dashboard/assets/paper_figures/figure_029.png",
+    "section": "introduction",
+    "caption_cn": "图1.12 “泡沫生成法”的反气泡生成示意图，上方是实验系统示意，下方标识了实际生成的过程图。[10]"
+  },
+  {
+    "thesis_fig": "Figure 1.12",
+    "path": "dashboard/assets/paper_figures/figure_028.png",
+    "section": "introduction",
+    "caption_cn": "图1.12 “泡沫生成法”的反气泡生成示意图，上方是实验系统示意，下方标识了实际生成的过程图。[10]"
+  },
+  {
+    "thesis_fig": "Figure 1.13",
+    "path": "dashboard/assets/paper_figures/figure_027.png",
+    "section": "introduction",
+    "caption_cn": "图1.13  研究主题总结"
+  },
+  {
+    "thesis_fig": "Figure 1.14",
+    "path": "dashboard/assets/paper_figures/figure_026.png",
+    "section": "introduction",
+    "caption_cn": "图1.14 研究内容路线图"
+  },
+  {
+    "thesis_fig": "Figure 2.1",
+    "path": "dashboard/assets/paper_figures/figure_025.png",
+    "section": "methods",
+    "caption_cn": "图2.1 三棱柱框用于PB上油滴扩散的研究示意图[25][27]"
+  },
+  {
+    "thesis_fig": "Figure 2.1",
+    "path": "dashboard/assets/paper_figures/figure_024.png",
+    "section": "methods",
+    "caption_cn": "图2.1 三棱柱框用于PB上油滴扩散的研究示意图[25][27]"
+  },
+  {
+    "thesis_fig": "Figure 2.2",
+    "path": "dashboard/assets/paper_figures/figure_023.png",
+    "section": "methods",
+    "caption_cn": "图2.2 PB支承框架（下面简称PB框架）设计模型示意图。（a）第1版，简易夹持装置，2支冗余设计；（b）第2版，强化夹持装置，肋结构用于加固，挡板用于夹具防滑。"
+  },
+  {
+    "thesis_fig": "Figure 2.3",
+    "path": "dashboard/assets/paper_figures/figure_022.png",
+    "section": "methods",
+    "caption_cn": "图2.3 夹持方法展示"
+  },
+  {
+    "thesis_fig": "Figure 2.4",
+    "path": "dashboard/assets/paper_figures/figure_021.png",
+    "section": "methods",
+    "caption_cn": "图2.4 基于PB框架的反气泡制备装置。（a）装置简图，较图2.3补充了注射泵（上）及液池（下）、高速摄像（前）及补光（后）信息；（b）俯视图，展示了PB上方节点的微观结构，由此可见物理系统独立的优势；（c）侧视图，实物照片。"
+  },
+  {
+    "thesis_fig": "Figure 2.5",
+    "path": "dashboard/assets/paper_figures/figure_019.png",
+    "section": "methods",
+    "caption_cn": "图2.5 处于真空箱中的反气泡制备装置。"
+  },
+  {
+    "thesis_fig": "Figure 2.6",
+    "path": "dashboard/assets/paper_figures/figure_018.png",
+    "section": "methods",
+    "caption_cn": "图 2.6 压力对环境气体物理参数的影响。红色框标注的是变化剧烈的两项（密度及运动粘度）。"
+  },
+  {
+    "thesis_fig": "Figure 2.7",
+    "path": "dashboard/assets/paper_figures/figure_005.png",
+    "section": "methods",
+    "caption_cn": "图2.7 实验数据图，共199组实验。"
+  },
+  {
+    "thesis_fig": "Figure 3.1",
+    "path": "dashboard/assets/paper_figures/figure_004.png",
+    "section": "results",
+    "caption_cn": "图3.1 反气泡生成典型阶段与现象图，图中0ms代表液滴撞击PB的0时刻点。"
+  },
+  {
+    "thesis_fig": "Figure 3.2",
+    "path": "dashboard/assets/paper_figures/figure_003.png",
+    "section": "results",
+    "caption_cn": "图3.2 反气泡生成典型结果分类图。（a） 同一液滴进入PB形成液-气-液多层结构（Multi-layer）的时序图，数据图来源同图3.1。（b-d） 不同参数液滴进入PB的三种典型结果，分别为“Multi-layer”、“Collapse”和“Insufficient Deformation”。"
+  },
+  {
+    "thesis_fig": "Figure 3.3",
+    "path": "dashboard/assets/paper_figures/figure_002.png",
+    "section": "results",
+    "caption_cn": "图3.3 液滴进入PB的简笔示意图。图中标注了一些关键参数。"
+  },
+  {
+    "thesis_fig": "Figure 3.4",
+    "path": "dashboard/assets/paper_figures/figure_098.png",
+    "section": "results",
+    "caption_cn": "图3.4 We-Bo相图，图中左侧虚线标注了的准则方程。实验中仅选取了R和v0变化的数据（即压强为大气压不变）。"
+  },
+  {
+    "thesis_fig": "Figure 3.5",
+    "path": "dashboard/assets/paper_figures/figure_093.png",
+    "section": "results",
+    "caption_cn": "图3.5 We-Bo相图，图中虚线标注了的准则方程。实验中加入了气压P变化。"
+  },
+  {
+    "thesis_fig": "Figure 3.6",
+    "path": "dashboard/assets/paper_figures/figure_091.png",
+    "section": "results",
+    "caption_cn": "图3.6 We-Bo准则的等效转换相图，与“滴落法”[8]结果对比。图中白色区域是反气泡的生成区。"
+  },
+  {
+    "thesis_fig": "Figure 3.7",
+    "path": "dashboard/assets/paper_figures/figure_090.png",
+    "section": "results",
+    "caption_cn": "图3.7 液滴进入PB时气膜运动的示意图。图中展示了极坐标系的建立方式和各参数方向。"
+  },
+  {
+    "thesis_fig": "Figure 3.8",
+    "path": "dashboard/assets/paper_figures/figure_071.png",
+    "section": "results",
+    "caption_cn": "图3.8 t/t相图。图中选择We+2Bo作横坐标是为了统一两个准则结果。同样，白色区域为Multi-layer可生成区域"
+  },
+  {
+    "thesis_fig": "Figure 4.1",
+    "path": "dashboard/assets/paper_figures/figure_068.png",
+    "section": "conclusions",
+    "caption_cn": "图4.1 研究完成工作图"
+  },
+  {
+    "thesis_fig": "Figure unknown",
+    "path": "dashboard/assets/paper_figures/figure_067.jpeg",
+    "section": "appendix",
+    "caption_cn": "外文资料的书面翻译"
+  },
+  {
+    "thesis_fig": "Figure unknown",
+    "path": "dashboard/assets/paper_figures/figure_066.png",
+    "section": "appendix",
+    "caption_cn": "摘要：肥皂泡和反气泡是相对反相的流体现象。本文进行了一系列实验，以建立肥皂泡和反气泡之间的联系。本文提出了一种借助肥皂泡形成反气泡的新方法，并通过高速摄影记录了复杂的流体动力学行为。另外，首次由液膜和泡沫结构制得多层反气泡，由此验证了多层反气泡存在的真实性。"
+  },
+  {
+    "thesis_fig": "Figure 1",
+    "path": "dashboard/assets/paper_figures/figure_065.png",
+    "section": "introduction",
+    "caption_cn": "图 1 （a）流体的循环。（b）肥皂泡和反气泡之间的相互作用。"
+  },
+  {
+    "thesis_fig": "Figure 2",
+    "path": "dashboard/assets/paper_figures/figure_064.png",
+    "section": "methods",
+    "caption_cn": "图 2 反气泡形成示意图（泡沫生成法）。"
+  },
+  {
+    "thesis_fig": "Figure 3",
+    "path": "dashboard/assets/paper_figures/figure_028.png",
+    "section": "results",
+    "caption_cn": "图3 （a）液滴穿过泡沫并生成反气泡。（b）液滴撞击两个肥皂泡之间的公共液膜界面。（c）肥皂泡发生变形并包裹液滴。（d）反气泡形成过程中液滴的下落速度。（e）（f）被气膜包裹的液滴下沉进入水中。"
+  },
+  {
+    "thesis_fig": "Figure 4",
+    "path": "dashboard/assets/paper_figures/figure_063.png",
+    "section": "conclusions",
+    "caption_cn": "图4  反气泡形成（液膜法）示意图及照片。"
+  },
+  {
+    "thesis_fig": "Figure 5",
+    "path": "dashboard/assets/paper_figures/figure_062.png",
+    "section": "appendix",
+    "caption_cn": "图5 （A）包裹有一层气膜和一层液膜的液滴（多层液滴，1G1L）的形成过程。（B）多层液滴在液面上的转化过程：由多层液滴转变为反气泡。（C）多层液滴在液面下的转化过程：由多层液滴最终形成反气泡。"
+  },
+  {
+    "thesis_fig": "Figure 6",
+    "path": "dashboard/assets/paper_figures/figure_061.png",
+    "section": "appendix",
+    "caption_cn": "图6 多层反气泡（4G3L）形成示意图。"
+  },
+  {
+    "thesis_fig": "Figure 8",
+    "path": "dashboard/assets/paper_figures/figure_060.png",
+    "section": "appendix",
+    "caption_cn": "图8 多层反气泡的崩溃。"
+  },
+  {
+    "thesis_fig": "Figure 8",
+    "path": "dashboard/assets/paper_figures/figure_059.png",
+    "section": "appendix",
+    "caption_cn": "图8 多层反气泡的崩溃。"
+  },
+  {
+    "thesis_fig": "Figure 9",
+    "path": "dashboard/assets/paper_figures/figure_058.jpeg",
+    "section": "appendix",
+    "caption_cn": "图9 利用泡沫膜界面（liquid film）的“膜式生成法”"
+  },
+  {
+    "thesis_fig": "Figure unknown",
+    "path": "dashboard/assets/paper_figures/figure_057.png",
+    "section": "appendix",
+    "caption_cn": "图`10 新反气泡。左：多核反气泡；右：荧光核反气泡。"
+  },
+  {
+    "thesis_fig": "Figure unknown",
+    "path": "dashboard/assets/paper_figures/figure_056.jpeg",
+    "section": "appendix",
+    "caption_cn": ""
+  },
+  {
+    "thesis_fig": "Figure unknown",
+    "path": "dashboard/assets/paper_figures/figure_055.jpeg",
+    "section": "appendix",
+    "caption_cn": ""
+  }
+]

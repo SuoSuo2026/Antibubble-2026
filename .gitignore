@@ -15,8 +15,21 @@ __pycache__/
 raw_data/
 processed_data/
 
-# Agent workspace (auto-generated)
-agent_workspace/
+# Agent workspace (auto-generated — track only paper writing artifacts)
+agent_workspace/*
+!agent_workspace/paper_sections/
+!agent_workspace/review_reports/
+!agent_workspace/writing_state.json
+!agent_workspace/prl_figure_index.json
+!agent_workspace/thesis_text.json
+!agent_workspace/thesis_figure_map.json
+!agent_workspace/figure_registry.json
+!agent_workspace/README_workflow.md
+!agent_workspace/workflow_phase_summary.md
+!agent_workspace/reviewer_prompt_templates.md
+!agent_workspace/rigid_ball_afternoon_protocol.md
+!agent_workspace/quill_session_brief.md
+!agent_workspace/daily_memo.md
 
 # Dashboard auto-generated cache
 dashboard/dashboard_data.json
@@ -30,8 +43,9 @@ dashboard/dashboard_data.json
 # Zotero internal file storage (exported .bib is enough)
 library/zotero_library.bib/
 
-# Excel files (binary, use cloud storage)
+# Excel files — keep thesis results only
 *.xlsx
+!library/Paper Writing/Results.xlsx
 
 # OS junk
 Thumbs.db

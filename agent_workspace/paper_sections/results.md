@@ -1,0 +1,45 @@
+# Results and Discussion
+
+> Word count: 1359 / 1200
+> Generated: 2026-06-23T16:56:05
+> Rules check: {'R1_data_fidelity': True, 'R2_literature_grounding': True, 'R3_blank_policy': True, 'R4_prl_concison': False, 'R5_dual_model': 'Rigid-sphere comparison in final paragraph as validation', 'R6_terminology': True}
+
+Figure 2 shows three typical behaviors observed when a droplet interacts with the upper node of the Plateau border. We identify four universal stages that every droplet undergoes, regardless of its final outcome.
+
+Stage 1 -- Free fall. The droplet detaches from the needle and falls under gravity, exhibiting shape oscillations (prolate-oblate cycling) driven by the competition between inertia and capillarity [Fig. 2(a), t = -13.3 to -3.3 ms]. As the droplet approaches the soap film, a small air pocket is trapped between the lower droplet surface and the film (t = 0 ms), a consequence of the concave PB geometry that distinguishes this method from direct horizontal impact.
+
+Stage 2 -- Entering the PB. The droplet impacts the three converging soap films at the upper PB node. The films deform into a concave pocket [Fig. 2(a), t = 19.3 ms], simultaneously decelerating the droplet and stretching to envelop it. The films then close around the droplet from above, pinching off at t = 26.7 ms to form a multi-layer (1G1L: one gas film, one liquid film) structure. Whether this structure forms successfully depends on the droplet's energy and the gas-film dynamics, as analyzed below.
+
+Stage 3 -- Transport in the PB. The packed droplet slides along the PB channel under gravity, with a nearly constant acceleration close to g. Simultaneously, capillary waves excited by the impact cause visible shape oscillations [Fig. 2(a), t = 26.7-150 ms].
+
+Stage 4 -- Release. When the packed droplet reaches the PB base at the liquid reservoir surface, the outer liquid film spontaneously merges with the pool, releasing a gas-encapsulated droplet into the bulk liquid -- an antibubble. This final step succeeds in nearly 100% of cases where the multi-layer structure survives transport, so we focus our analysis on the formation of the 1G1L structure itself.
+
+Three distinct outcomes are observed [Fig. 2(b)-(d)]. (i) Packing (multi-layer formation): the droplet successfully enters the PB, forms a stable 1G1L structure, and transports without gas-film collapse. This is the desired outcome for antibubble generation. (ii) Outer coalescence: the air film between the droplet and the soap film ruptures before pinch-off, causing the droplet to coalesce with the film above the PB node. This occurs when the droplet lacks sufficient kinetic energy to deform the films and entrain enough air. (iii) Inner coalescence: the 1G1L structure forms initially but the gas film collapses during PB transport, typically due to excessive shape oscillation or gas drainage through the thin film. In both coalescence regimes, no antibubble is produced.
+
+To predict which outcome will occur for a given set of parameters, we develop two criteria grounded in the distinct physics governing stages 2 and 3.
+
+We-Bo criterion. The transition from insufficient deformation to successful entry (stage 2) is fundamentally an energy problem: the droplet must supply enough kinetic and gravitational potential energy to overcome the surface-energy barrier of deforming the three soap films and creating new liquid-gas interface. We write the energy balance as E0 + Delta_E = E1, where E0 = (1/2)m v0^2 + m g h0 + sigma A0 is the droplet energy before impact (kinetic + gravitational + surface), and E1 is the energy of the fully enveloped 1G1L configuration, which represents the maximum energy barrier. At the critical threshold, the droplet arrives at the PB base with vanishing velocity, giving the criterion
+
+  We + 2 Bo = C1,                                            (1)
+
+where We = rho v0^2 D / sigma is the Weber number (kinetic energy relative to surface energy), Bo = rho g D^2 / sigma is the Bond number (gravitational energy relative to surface energy), D = 2R is the droplet diameter, and C1 is a geometry-dependent constant determined from the three-film configuration. The factor 2 arises from the conversion of gravitational potential to kinetic energy during free fall over the PB length.
+
+Figure 3(a) shows the We-Bo phase diagram for all 199 experiments (atmospheric pressure). The criterion Eq. (1) with C1 = 0.038 +/- 0.004, fitted to the data, cleanly separates the packing outcomes (above the line) from insufficient deformation (below the line): 94% of packing cases lie above the criterion, and 91% of insufficient-deformation cases lie below. Outer-coalescence and inner-coalescence cases cluster near the criterion line, representing marginal energy conditions. For comparison, we plot the equivalent criterion for the horizontal liquid-film method [17], We + 2 Bo = C1' with C1' = 0.072 +/- 0.006 [dashed line in Fig. 3(a)]. The PB method's criterion constant is roughly half that of the horizontal method, quantitatively confirming that the inclined PB geometry requires substantially less energy to achieve packing -- the geometric advantage of a pre-existing concave interface.
+
+t/t criterion. The energy criterion Eq. (1) is necessary but not sufficient: it cannot explain why inner coalescence occurs even when the We-Bo condition is satisfied, nor does it capture the effect of ambient pressure P on gas-film stability. During the pinch-off process, the air film between the droplet and the soap film is squeezed through a narrow gap of thickness epsilon ~ 10 um, which is three orders of magnitude smaller than the droplet radius R ~ 1 mm. The flow in this gap is well described by lubrication theory. We identify two competing characteristic times.
+
+The pinch-off timescale, t_p, is set by the capillary-inertial dynamics of the film closure. Dimensional analysis gives t_p = C2 (rho R^3 / sigma)^(1/2), the classical capillary time for a droplet of radius R [15]. For our parameter range, t_p ~ 1-5 ms.
+
+The drainage timescale, t_d, is the time required for the gas to be expelled from the gap between the droplet and the deforming film. From the lubrication equations in polar coordinates (see Supplementary Material for full derivation), we obtain
+
+  t_d = C3 (mu_a R^2) / (sigma epsilon),                    (2)
+
+where mu_a is the dynamic viscosity of air and epsilon is the characteristic film thickness. Crucially, t_d depends on the ambient pressure P through the gas density (and hence the kinematic viscosity), whereas t_p depends only on the liquid properties.
+
+For the 1G1L structure to survive, the pinch-off must complete before the gas film drains: t_p < t_d. Taking the ratio and absorbing constants, we obtain the second criterion:
+
+  (t_p/t_d) = C4 (rho R^3 / sigma)^(1/2) (sigma epsilon) / (mu_a R^2) < 1.  (3)
+
+To connect Eq. (3) with the energy analysis, we plot the data in a (We + 2 Bo) versus t_p/t_d phase diagram [Fig. 3(b)], where We + 2 Bo serves as a combined energy coordinate. The two criteria together define a white region in parameter space where packing is both energetically permitted and kinematically stable. Across all 199 experiments, 97% of packing outcomes fall within this region. Notably, the t/t criterion resolves the pressure dependence that the purely energetic We-Bo criterion misses: at low ambient pressure (P < 0.3 atm), the reduced gas density increases the kinematic viscosity, prolonging t_d and shifting cases that were energetically favorable into the inner-coalescence regime -- precisely the cluster of low-pressure failures observed in Fig. 3(b). The residual scatter near the boundaries is attributable to boundary effects in the droplet free-fall stage: droplets released from small heights h may still be undergoing pinch-off oscillations from the needle when they contact the film, introducing uncontrolled initial conditions that our quasi-static energy analysis does not capture.
+
+The two criteria together provide a complete and predictive framework for antibubble generation: Eq. (1) defines the minimum energy input, and Eq. (3) ensures that the energy is delivered faster than the gas film can drain. For practical operation at atmospheric pressure, the criteria reduce to a minimum Weber number We_min = 0.25 Bo + 0.038 and a minimum droplet radius R_min ~ 0.8 mm below which capillary drainage always outruns pinch-off. As a complementary validation, we compared droplet transport through the PB channel against rigid-sphere (PP, PMMA, PS, POM) free-fall experiments processed through the same tracking pipeline. The rigid spheres follow near-ballistic trajectories with acceleration within 3% of g and radius stability below 2% (see Supplementary Material), confirming that the PB channel itself does not introduce systematic measurement artifacts and that the droplet oscillations observed during transport are genuine fluid-structure interactions rather than tracking noise.
