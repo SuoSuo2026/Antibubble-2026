@@ -2160,6 +2160,41 @@ section[data-page-panel="console"] > .console-grid {
   padding-top: 8px;
 }
 
+/* ── Git Status Badge ──────────────────────────────────────────────── */
+
+.git-zone {
+  padding: 0;
+}
+
+.git-badge {
+  padding: 16px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+}
+
+.git-badge-head h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.git-badge-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.git-badge-detail a {
+  color: var(--accent, #2563eb);
+  text-decoration: none;
+}
+
+.git-badge-detail a:hover {
+  text-decoration: underline;
+}
+
 .phase-card h2 {
   margin: 0 0 8px;
   font-size: 16px;

@@ -1142,6 +1142,35 @@ function renderPaperProgress() {
         </article>
       </div>
     </section>
+    <section class="console-zone git-zone">
+      ${renderGitBadge()}
+    </section>
+  `;
+}
+
+function renderGitBadge() {
+  const git = dashboardData.git || {};
+  const synced = git.synced;
+  const tag = git.latest_tag || "-";
+  const commit = git.latest_commit || "-";
+  const ahead = git.ahead || 0;
+  const behind = git.behind || 0;
+  const remote = git.remote || "";
+  const icon = synced ? "🟢" : ahead > 0 ? "🟡" : "🔴";
+  const statusText = synced ? "已同步" : ahead > 0 ? `领先 ${ahead} 个提交` : behind > 0 ? `落后 ${behind} 个提交` : "未知";
+  const githubUrl = remote ? `https://github.com/${remote}` : "";
+  return `
+    <div class="git-badge">
+      <div class="git-badge-head">
+        <p class="eyebrow">Git Status</p>
+        <h3>${icon} ${statusText}</h3>
+      </div>
+      <div class="git-badge-detail">
+        <span><strong>Tag:</strong> ${escapeHtml(tag)}</span>
+        <span><strong>Commit:</strong> ${escapeHtml(commit.substring(0, 60))}</span>
+        ${githubUrl ? `<span><a href="${githubUrl}" target="_blank">${escapeHtml(remote)}</a></span>` : ""}
+      </div>
+    </div>
   `;
 }
 

@@ -1178,6 +1178,96 @@ def build_paper_sections_payload() -> dict[str, Any]:
     }
 
 
+def build_git_status() -> dict[str, Any]:
+    """Collect git status for monitoring in the dashboard."""
+    import subprocess
+    try:
+        result = subprocess.run(
+            ["git", "log", "--oneline", "-5", "--format=%h %ai %s"],
+            cwd=str(BASE_DIR),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=10,
+            check=False,
+        )
+        log_lines = result.stdout.strip().split("\n") if result.returncode == 0 else []
+    except Exception:
+        log_lines = []
+
+    try:
+        result = subprocess.run(
+            ["git", "describe", "--tags", "--abbrev=0"],
+            cwd=str(BASE_DIR),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=10,
+            check=False,
+        )
+        latest_tag = result.stdout.strip() if result.returncode == 0 else "none"
+    except Exception:
+        latest_tag = "error"
+
+    try:
+        result = subprocess.run(
+            ["git", "status", "--short", "--branch"],
+            cwd=str(BASE_DIR),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=10,
+            check=False,
+        )
+        status_line = result.stdout.strip().split("\n")[0] if result.returncode == 0 else "unknown"
+    except Exception:
+        status_line = "error"
+
+    # Parse ahead/behind
+    ahead = 0
+    behind = 0
+    if "ahead" in status_line:
+        m = __import__("re").search(r"ahead\s+(\d+)", status_line)
+        if m:
+            ahead = int(m.group(1))
+    if "behind" in status_line:
+        m = __import__("re").search(r"behind\s+(\d+)", status_line)
+        if m:
+            behind = int(m.group(1))
+
+    synced = (ahead == 0 and behind == 0 and "origin" in status_line)
+
+    try:
+        result = subprocess.run(
+            ["git", "remote", "get-url", "origin"],
+            cwd=str(BASE_DIR),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=10,
+            check=False,
+        )
+        remote_url = result.stdout.strip() if result.returncode == 0 else ""
+    except Exception:
+        remote_url = ""
+
+    return {
+        "branch": "master",
+        "latest_tag": latest_tag,
+        "latest_commit": log_lines[0] if log_lines else "",
+        "recent_commits": log_lines[:5],
+        "ahead": ahead,
+        "behind": behind,
+        "synced": synced,
+        "remote": remote_url.replace("https://github.com/", "").replace(".git", "") if remote_url else "",
+        "status_line": status_line,
+    }
+
+
 def build_dashboard_data() -> dict[str, Any]:
     ensure_workflow_files()
     switches = load_json(SWITCHES_PATH, DEFAULT_SWITCHES)
@@ -1282,6 +1372,7 @@ def build_dashboard_data() -> dict[str, Any]:
         "manuscript": build_manuscript_draft(cases, eureka_corpus.get("research_digest", {})),
         "paper_sections": build_paper_sections_payload(),
         "paper_figures": _load_json_file(PRL_FIGURE_INDEX_PATH, []),
+        "git": build_git_status(),
         "reviewer_profile": profile,
         "switches": switches,
         "cases": cases,
