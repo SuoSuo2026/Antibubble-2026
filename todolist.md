@@ -9,6 +9,7 @@
 
 - [ ] **15_PMMA_multi 人工复核** — 有效窗口偏短（Franklin 72.6 分），需确认 ROI/有效帧是否需要进一步调整
 - [ ] **0415 液滴批次激活** — `0415-26star_DB_voyager` 仍为 `seen_existing`，补写 intake 后可处理；`0415-20star_PB_to_DB_to_MB`、`0415-33_multi_and_multi_and_collapse` 处于 paused
+- [ ] **接入原始数据** — 需要从 .tif 原始文件提取：outcome 标注、气囊 V_pocket 测量、We/Bo 计算（详见 `agent_workspace/theory_framework.json` → experiment_plan）
 
 ---
 

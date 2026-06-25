@@ -34,6 +34,7 @@ QUILL_SESSION_BRIEF_PATH = WORKFLOW_DIR / "quill_session_brief.md"
 PAPER_SECTIONS_DIR = WORKFLOW_DIR / "paper_sections"
 WRITING_STATE_PATH = WORKFLOW_DIR / "writing_state.json"
 PRL_FIGURE_INDEX_PATH = WORKFLOW_DIR / "prl_figure_index.json"
+THEORY_FRAMEWORK_PATH = WORKFLOW_DIR / "theory_framework.json"
 PAPER_FIGURES_ASSETS = DASHBOARD_DIR / "assets" / "paper_figures"
 
 
@@ -1372,6 +1373,7 @@ def build_dashboard_data() -> dict[str, Any]:
         "manuscript": build_manuscript_draft(cases, eureka_corpus.get("research_digest", {})),
         "paper_sections": build_paper_sections_payload(),
         "paper_figures": _load_json_file(PRL_FIGURE_INDEX_PATH, []),
+        "theory_framework": _load_json_file(THEORY_FRAMEWORK_PATH, {}),
         "git": build_git_status(),
         "reviewer_profile": profile,
         "switches": switches,

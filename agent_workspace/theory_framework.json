@@ -1,0 +1,89 @@
+{
+  "updated_at": "2026-06-25",
+  "core_insight": "PB is a universal transport channel. Droplet (deformable) vs rigid sphere (rigid) parallel transport reveals: PB geometry provides universal low-resistance transport; droplet deformability enables gas-film entrainment (enabling mechanism AND failure mode).",
+  "criteria": [
+    {
+      "name": "We-Bo criterion",
+      "stage": "Stage 2: Entering PB",
+      "physics": "Energy conservation",
+      "formula": "We + 2Bo = C1",
+      "value": "C1 = 0.038 ± 0.004",
+      "accuracy": "94% packing vs insufficient separation",
+      "comparison": "C1' = 0.072 ± 0.006 (horizontal method)",
+      "advantage": "PB geometry ~2× more efficient",
+      "status": "complete"
+    },
+    {
+      "name": "t_p/t_d criterion",
+      "stage": "Stage 2→3: Pinch-off survival",
+      "physics": "Gas film lubrication drainage",
+      "formula": "t_p/t_d < 1",
+      "key_parameter": "ε ~ 10 μm (estimated, needs measurement)",
+      "pressure_dependence": "P < 0.3 atm → t_d increases → collapse",
+      "status": "derivation complete, ε measurement pending"
+    },
+    {
+      "name": "Collapse number C",
+      "stage": "Stage 3: PB transport",
+      "physics": "Coupled PB film–droplet oscillation + cyclic gas shuttling",
+      "formula": "C ≡ α³ × f × t_trans / (V_p/V_f)",
+      "key_insight": "n=2 mode preserves gas volume to first order → reversible shuttling; net leakage from h³ rectification + bottom-edge leakage + pocket symmetry breaking",
+      "rigid_sphere": "α=0 → C=0 → never collapses ✓",
+      "status": "model derived, V_p and ε measurement pending"
+    }
+  ],
+  "coupled_model": {
+    "description": "Coupled PB film–droplet–gas film oscillator",
+    "key_findings": [
+      "τ_eq ~ 0.1 ms ≪ T_osc ~ 15 ms → gas pressure spatially uniform",
+      "ρ_film δ_film / ρR ~ 5×10⁻⁴ → PB film inertia negligible, quasi-static",
+      "k_gas / k_cap ~ 10⁶ → gas film extremely stiff, locks PB film to droplet",
+      "n=2 mode: ∫∫Y_{2m} dΩ = 0 → volume-preserving → no net P_gas change",
+      "ε(θ,t) ≈ ε₀[1 + α P₂(cosθ) sin(2πft)], α ~ 0.03-0.04",
+      "ε_min ≈ 0.98 ε₀ ≫ ε_crit ~ 100 nm → stable for many cycles"
+    ],
+    "collapse_sources": [
+      "h³ rectification: Q_out/Q_in ~ (1+α)³/(1-α)³ ~ 1+6α → ~20% net bias",
+      "Bottom-edge leakage at droplet-PB-liquid triple line",
+      "Gas pocket symmetry breaking (top-weighted gas distribution)"
+    ],
+    "gravity_comparison": {
+      "τ_g": "~2.4 s (gravitational drainage time)",
+      "t_trans": "~0.1 s (PB transit time)",
+      "v_osc/v_g": "~5.4",
+      "conclusion": "Oscillation dominates gravity during PB transport"
+    }
+  },
+  "oscillation_data": {
+    "cases": [
+      {"case": "0415-42star_freefall", "R_mm": 2.035, "f_Hz": 60.6, "f_std_Hz": 0.4, "deltaR_R_pct": 3.9, "r2": 0.999998},
+      {"case": "0415-11star_multi", "R_mm": 1.936, "f_Hz": 68.6, "f_std_Hz": 0.7, "deltaR_R_pct": 3.3, "r2": 0.999995},
+      {"case": "0415-17star_MB_voyager", "R_mm": 2.331, "f_Hz": 62.1, "f_std_Hz": 1.3, "deltaR_R_pct": 3.3, "r2": 0.99997},
+      {"case": "0415-26star_DB_voyager", "R_mm": 2.007, "f_Hz": null, "note": "no oscillation fit"},
+      {"case": "0415-32star_insuff", "R_mm": 1.701, "f_Hz": null, "note": "18 valid frames, early failure"}
+    ],
+    "lamb_comparison": "Measured frequencies lie near n=3 Lamb mode; n=2 volume-preserving property explains oscillation persistence"
+  },
+  "experiment_plan": {
+    "priority": [
+      {"rank": "P0", "task": "ε measurement via gas pocket tracking (Method D)", "status": "pending_raw_data"},
+      {"rank": "P0", "task": "Outcome labeling for all 0415 droplet cases", "status": "pending_raw_data"},
+      {"rank": "P1", "task": "Lamb frequency theoretical comparison", "status": "ready"},
+      {"rank": "P1", "task": "Oscillation amplitude vs outcome correlation", "status": "pending_raw_data"},
+      {"rank": "P2", "task": "Interferometric ε measurement (Method B)", "status": "optional"},
+      {"rank": "P2", "task": "Dye experiment for gas film validation", "status": "optional"}
+    ]
+  },
+  "figure_plan": {
+    "fig1": {"content": "Experimental setup + PB frame", "status": "existing"},
+    "fig2": {"content": "Parallel transport: droplet vs rigid sphere image sequences", "status": "needs_rigid_sphere_images"},
+    "fig3": {"content": "We-Bo phase diagram", "status": "existing"},
+    "fig4": {"content": "t_p/t_d combined phase diagram", "status": "existing"},
+    "fig5": {"content": "Oscillation comparison: droplet shape vs rigid trajectory", "status": "planned"}
+  },
+  "weaknesses_addressed": [
+    {"weakness": "Innovation: droplet as special PB transport", "solution": "Parallel transport framing: droplet vs rigid sphere comparison isolates universal geometry from droplet-specific physics"},
+    {"weakness": "Physical mechanism depth (gas film)", "solution": "Coupled PB film–droplet oscillation model + cyclic gas shuttling + collapse number C"},
+    {"weakness": "ε unmeasured", "solution": "Gas pocket tracking (Method D) planned; interferometry as backup"}
+  ]
+}

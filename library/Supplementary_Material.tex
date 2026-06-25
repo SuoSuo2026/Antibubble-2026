@@ -1,0 +1,671 @@
+\documentclass[%
+ preprint,
+ superscriptaddress,
+ amsmath,amssymb,
+ aps, prl,
+]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{hyperref}
+\usepackage{txfonts}
+\usepackage{color}
+\usepackage{esint}
+
+\begin{document}
+
+\title{Supplementary Material:\\
+Theoretical Framework for Droplet and Rigid-Particle Transport\\
+through a Single Plateau Border}
+
+\date{\today}
+
+\maketitle
+
+\section{Energy Criterion: We--Bo Relation}
+
+\subsection{Physical picture}
+
+A droplet of radius $R$, density $\rho$, surface tension $\sigma$, falling with velocity $v_0$, approaches the upper node of a Plateau border (PB).
+To successfully enter the PB and form the 1G1L (one gas, one liquid) multi-layer structure,
+the droplet must supply sufficient kinetic and gravitational energy to overcome the surface-energy barrier
+of deforming three converging soap films and creating new liquid--gas interface.
+
+\subsection{Energy balance}
+
+The energy of the system is evaluated at two states:
+
+\textbf{State 0} --- droplet just before impact:
+\begin{equation}
+E_0 = \frac{1}{2} m v_0^2 + m g h_0 + \sigma A_0,
+\end{equation}
+where $m = \frac{4}{3}\pi R^3\rho$, $h_0$ is the PB channel length ($\sim 45$~mm),
+and $A_0 = 4\pi R^2$.
+
+\textbf{State 1} --- droplet fully enveloped by the 1G1L structure at the PB base:
+\begin{equation}
+E_1 = \sigma (A_\text{drop} + A_\text{gas} + A_\text{film}) + \Delta E_\text{visc},
+\end{equation}
+where $A_\text{drop} \approx 4\pi R^2$, $A_\text{gas} \approx 4\pi R^2$ (inner gas shell),
+$A_\text{film}$ is the deformed PB film area, and $\Delta E_\text{visc}$ accounts for viscous dissipation
+during film deformation and pinch-off.
+
+At the critical threshold, the droplet arrives with vanishing velocity, giving
+$E_0 = E_1$.  Normalizing by the droplet surface energy $\sigma R^2$, and noting that
+the gravitational potential $m g h_0$ during free fall over height $h_0$ converts to
+kinetic energy equivalent to an effective Weber number contribution $2\,\text{Bo}$,
+one obtains:
+
+\begin{equation}
+\boxed{\text{We} + 2\,\text{Bo} = C_1},
+\end{equation}
+
+where
+\begin{align}
+\text{We} &= \frac{\rho v_0^2 D}{\sigma}, \qquad
+D = 2R, \\
+\text{Bo}  &= \frac{\rho g D^2}{\sigma}, \\
+C_1 &= \frac{\Delta A}{\sigma R^2} \sim O(10^{-2}),
+\end{align}
+with $\Delta A$ the net surface area created during 1G1L formation, and $C_1$ a
+geometry-dependent constant determined by the three-film PB configuration.
+The factor $2$ in $2\,\text{Bo}$ arises from the conversion of gravitational
+potential to kinetic energy during free fall over the PB length, which in the
+inclined PB geometry contributes twice the static Bond number.
+
+\subsection{Experimental determination}
+
+From 199 experiments spanning $R = 1.0$--$2.2$~mm, $v_0 = 0.1$--$1.8$~m/s,
+and $P = 0.1$--$1.0$~atm, the criterion constant is fitted as
+\begin{equation}
+C_1 = 0.038 \pm 0.004.
+\end{equation}
+For comparison, the horizontal liquid-film method~\cite{Bai2016} yields
+$C_1' = 0.072 \pm 0.006$, confirming that the PB geometry requires
+approximately half the energy to achieve packing.
+
+\subsection{Geometric advantage}
+
+The PB method's lower $C_1$ has a clear geometric origin:
+the concave PB interface pre-entrains an air pocket before impact,
+so the droplet does not need to create the entire gas shell \emph{de novo}.
+The horizontal method must displace liquid to create the air cavity,
+while the PB provides it as a pre-existing geometric feature.
+This is quantified by $C_1/C_1' \approx 0.53 \pm 0.07$.
+
+\section{Gas Film Drainage Criterion: $t_p/t_d$ Ratio}
+
+\subsection{Physical picture}
+
+Even when the energy condition (We--Bo) is satisfied, the 1G1L structure
+can fail if the gas film drains before pinch-off completes.
+During the pinch-off process (Stage~2), the air film between the droplet
+and the deforming soap film is squeezed through a narrow gap of thickness
+$\varepsilon \sim 10~\mu\text{m}$ --- three orders of magnitude smaller than
+the droplet radius $R \sim 1$~mm.  The flow in this gap is governed by
+lubrication theory.
+
+\subsection{Lubrication model}
+
+We consider the gas film in polar coordinates $(r, \theta)$ centered at the
+droplet--film contact region (Fig.~S1).  With film thickness
+$\varepsilon \ll R$, the Reynolds lubrication equation for a compressible
+gas in spherical geometry reads:
+
+\begin{equation}
+\frac{\partial}{\partial\theta}\left(
+\varepsilon^3 \sin\theta \,\frac{\partial P}{\partial\theta}
+\right)
++ \frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\left(
+\varepsilon^3 \frac{\partial P}{\partial\phi}
+\right)
+= 12\mu_a R^2 \sin\theta \,\frac{\partial\varepsilon}{\partial t},
+\end{equation}
+
+where $\mu_a \approx 1.8\times10^{-5}$~Pa$\cdot$s is the dynamic viscosity of air.
+
+\subsection{Two competing timescales}
+
+\textbf{Pinch-off timescale} $t_p$: set by the capillary--inertial dynamics of
+film closure.  Dimensional analysis gives the classical capillary time:
+\begin{equation}
+t_p = C_2 \sqrt{\frac{\rho R^3}{\sigma}}.
+\end{equation}
+For the experimental parameter range ($R = 1.0$--$2.2$~mm,
+$\sigma = 30.2$~mN/m, $\rho = 10^3$~kg/m$^3$),
+$t_p \sim 1$--$5$~ms.
+
+\textbf{Drainage timescale} $t_d$: the time required for gas to be expelled
+from the gap.  From the lubrication equation with characteristic pressure
+$\Delta P \sim \sigma/\varepsilon$ (capillary pressure driving drainage)
+and gap thickness $\varepsilon$:
+
+\begin{equation}
+t_d = C_3 \frac{\mu_a R^2}{\sigma\varepsilon}.
+\end{equation}
+
+Crucially, $t_d$ depends on ambient pressure $P$ through the gas density
+(and hence kinematic viscosity), whereas $t_p$ depends only on liquid properties.
+
+\subsection{Criterion}
+
+For the 1G1L structure to survive pinch-off, closure must complete before
+the gas film drains:
+\begin{equation}
+\frac{t_p}{t_d} < 1.
+\end{equation}
+
+Taking the ratio and absorbing constants:
+
+\begin{equation}
+\boxed{\frac{t_p}{t_d}
+= C_4\,
+\frac{\sqrt{\rho R^3/\sigma}}{\mu_a R^2/(\sigma\varepsilon)}
+= C_4\,\frac{\sigma\varepsilon}{\mu_a}\sqrt{\frac{\rho}{\sigma R}}
+< 1.}
+\end{equation}
+
+The criterion resolves the pressure dependence that the purely energetic
+We--Bo criterion misses: at low ambient pressure ($P < 0.3$~atm),
+the reduced gas density increases the kinematic viscosity, prolonging
+$t_d$ and shifting energetically favorable cases into the inner-coalescence regime.
+
+\section{Coupled Droplet--PB Film Oscillation Model}
+
+\subsection{System description}
+
+After pinch-off (Stage~3), the droplet is enveloped by a thin gas film
+and surrounded by the PB soap film.  Both interfaces can deform:
+
+\begin{itemize}
+\item \textbf{Droplet surface} $R(\theta, \phi, t) = R_0 + \delta R(\theta, \phi, t)$.
+      Driven by capillary forces (Lamb modes).  The droplet has inertia
+      $\sim \rho R^3$ and restoring stiffness $\sim \sigma$.
+
+\item \textbf{PB soap film} $H(\theta, \phi, t) = H_0 + \delta H(\theta, \phi, t)$.
+      Deforms under gas pressure and its own surface tension $\sigma_f \approx 2\sigma$.
+      The film mass $\rho_f \delta_f$ is negligible ($\delta_f \sim 1~\mu\text{m}
+      \ll R$), so the film responds quasi-statically.
+\end{itemize}
+
+The \textbf{gas film thickness} is the gap between the two interfaces:
+\begin{equation}
+\varepsilon(\theta, \phi, t) = H(\theta, \phi, t) - R(\theta, \phi, t).
+\end{equation}
+
+A \textbf{gas pocket} of volume $V_p(t)$ sits above the droplet
+(at the pinch-off junction), connected to the thin film region.
+The total gas in the system is $V_{\text{gas}} = V_p + V_f$,
+where $V_f = \iint \varepsilon(\theta,\phi,t)\,R_0^2\sin\theta\,d\theta\,d\phi$
+is the thin-film gas volume.
+
+\subsection{Droplet dynamics}
+
+Expanding the droplet shape in spherical harmonics
+$Y_{nm}(\theta,\phi)$:
+\begin{equation}
+R(\theta,\phi,t) = R_0 + \sum_{n=2}^{\infty}\sum_{m=-n}^{n}
+a_{nm}(t)\,Y_{nm}(\theta,\phi).
+\end{equation}
+(The $n=0$ term is constrained by volume conservation; $n=1$ is
+center-of-mass translation.)
+
+For small oscillations, each mode satisfies a damped harmonic oscillator
+equation~\cite{Lamb1881,Prosperetti1980}:
+\begin{equation}
+\ddot{a}_{nm} + 2\gamma_n\,\dot{a}_{nm} + \omega_n^2\,a_{nm}
+= \frac{F_{nm}(t)}{\rho R_0^3},
+\label{eq:lamb_forced}
+\end{equation}
+
+where the Lamb eigenfrequencies are
+\begin{equation}
+\omega_n^2 = \frac{n(n-1)(n+2)\,\sigma}{\rho R_0^3},
+\end{equation}
+the viscous damping rate is
+\begin{equation}
+\gamma_n = \frac{(n-1)(2n+1)\,\mu}{\rho R_0^2},
+\end{equation}
+and $F_{nm}(t)$ is the generalized force from the gas film pressure:
+\begin{equation}
+F_{nm}(t) = R_0^2 \iint \bigl[P_{\text{gas}}(t) - P_{\text{amb}}\bigr]\,
+Y_{nm}^*(\theta,\phi)\,\sin\theta\,d\theta\,d\phi.
+\end{equation}
+
+For the experimental parameters ($R_0 \sim 2$~mm,
+$\sigma = 30.2$~mN/m, $\mu = 1.2$~mPa$\cdot$s):
+\begin{align}
+f_2 &= \frac{\omega_2}{2\pi} \approx 27~\text{Hz}, \quad
+\gamma_2^{-1} \approx 0.7~\text{s} \quad (\text{weak damping}), \\
+f_3 &= \frac{\omega_3}{2\pi} \approx 54~\text{Hz}.
+\end{align}
+
+\subsection{PB film dynamics}
+
+The PB soap film has surface tension $\sigma_f \approx 2\sigma \approx 60$~mN/m
+(two surfactant monolayers).  Its inertia is characterized by the dimensionless ratio
+\begin{equation}
+\Pi_{\text{inertia}} = \frac{\rho_f\delta_f}{\rho R_0}
+\sim \frac{10^3 \times 10^{-6}}{10^3 \times 2\times10^{-3}}
+= 5\times10^{-4} \ll 1.
+\end{equation}
+Hence the film responds quasi-statically.  Its equilibrium shape satisfies
+the Young--Laplace equation with gas pressure loading:
+\begin{equation}
+-\sigma_f\,\nabla^2 H + \bigl[P_{\text{gas}}(t) - P_{\text{amb}}\bigr] = 0,
+\label{eq:pb_young_laplace}
+\end{equation}
+subject to fixed boundary conditions where the three soap films meet
+(at the PB edges, $120^\circ$ apart).
+
+For small deformations, Eq.~\eqref{eq:pb_young_laplace} gives the film
+deflection proportional to the local pressure difference:
+\begin{equation}
+\delta H(\theta,\phi,t) \approx
+\frac{P_{\text{gas}}(t) - P_{\text{amb}}}{\sigma_f}\,
+\Phi(\theta,\phi),
+\label{eq:pb_deflection}
+\end{equation}
+where $\Phi(\theta,\phi)$ is a geometric Green's function determined by
+the triangular PB cross-section.
+
+\subsection{Gas pressure coupling}
+
+The two interfaces are coupled through the gas film pressure $P_{\text{gas}}(t)$.
+Three timescales govern the gas dynamics:
+
+\begin{enumerate}
+\item \textbf{Pressure equilibration} $\tau_{\text{eq}}$ --- the time for a
+pressure disturbance to propagate through the thin film:
+\begin{equation}
+\tau_{\text{eq}} \sim \frac{12\mu_a L^2}{P_{\text{amb}}\varepsilon_0^2}
+\sim 0.1~\text{ms},
+\end{equation}
+for $L \sim R_0 \sim 2$~mm, $\varepsilon_0 \sim 10~\mu\text{m}$.
+
+\item \textbf{Oscillation period} $T_{\text{osc}} = 1/f \sim 15$~ms.
+
+\item \textbf{PB transit time} $t_{\text{trans}} = L_{\text{PB}}/v \sim 30$--$150$~ms.
+\end{enumerate}
+
+Since $\tau_{\text{eq}} \ll T_{\text{osc}} \ll t_{\text{trans}}$,
+the gas pressure is spatially uniform on the oscillation timescale
+(instantaneous equilibration), and the gas behaves isothermally:
+\begin{equation}
+P_{\text{gas}}(t) = P_{\text{amb}}\,
+\frac{V_{\text{gas}}(t)}{V_f(t) + V_p(t)}.
+\label{eq:ideal_gas}
+\end{equation}
+
+On the fast ($T_{\text{osc}}$) timescale, gas exchange with the outside
+world is negligible, so for a single oscillation cycle:
+\begin{equation}
+V_{\text{gas}} \approx \text{const} \quad \text{(per cycle)}.
+\end{equation}
+
+\subsection{The $n=2$ mode: a critical observation}
+
+The $n=2$ (ellipsoidal) spherical harmonic has the crucial property
+of volume-preservation to first order:
+\begin{equation}
+\iint Y_{2m}(\theta,\phi)\,\sin\theta\,d\theta\,d\phi = 0,
+\qquad m = -2,-1,0,1,2.
+\end{equation}
+
+Consequently, the $n=2$ oscillation does \emph{not} change the total
+thin-film volume $V_f$ at linear order.  Gas is merely redistributed
+\emph{within} the film --- from the equator to the poles during the
+prolate phase, and from the poles to the equator during the oblate phase.
+
+This has a profound implication: \textbf{for pure $n=2$ oscillations,
+$P_{\text{gas}}$ remains constant to linear order, and the PB film
+experiences no net pressure force.}  The droplet oscillates essentially
+freely, with the gas film acting as an incompressible mediator that
+transmits volume from one region to another.
+
+\subsection{Coupled frequency shift}
+
+When the gas pocket is present, the spherical symmetry is broken:
+gas can flow preferentially between the pocket (at the droplet's top,
+$\theta \approx 0$) and the thin-film region.  The pocket provides
+additional compressibility.  The effective gas spring constant is
+\begin{equation}
+k_{\text{gas}} = \frac{P_{\text{amb}} A^2}{V_p + V_f}
+= \frac{4\pi P_{\text{amb}} R_0^2}{\varepsilon_0}\,
+\frac{1}{1 + V_p/V_f}.
+\end{equation}
+
+The ratio of gas spring to capillary stiffness for the $n=2$ mode is
+\begin{equation}
+\Pi_{\text{spring}} \equiv \frac{k_{\text{gas}}}{k_{\text{cap}}}
+= \frac{\pi}{2}\frac{P_{\text{amb}}}{\sigma}
+\frac{R_0^2}{\varepsilon_0}\frac{1}{1 + V_p/V_f}
+\sim 10^6 \times \frac{1}{1 + V_p/V_f}.
+\end{equation}
+
+$\Pi_{\text{spring}} \gg 1$ even for large $V_p/V_f$.
+This means the gas film is \textbf{extremely stiff} compared to capillary
+forces.  The PB film and droplet surface are \textbf{mechanically locked}
+by the gas --- they move together, maintaining $\varepsilon(\theta,t)
+\approx \text{const}$ locally, with only the small ($\sim \delta R/R$)
+modulation permitted by the spatial redistribution of incompressible gas.
+
+The observed oscillation frequency ($f \approx 60$--$69$~Hz) is therefore
+interpreted as a \textbf{coupled mode} of the droplet + PB film system,
+where the PB film tension $\sigma_f$ adds to the restoring force.
+A rough estimate gives
+\begin{equation}
+f_{\text{eff}} \approx f_{\text{Lamb}}^{(n=2)}\,
+\sqrt{\frac{\sigma + \sigma_f}{\sigma}}
+\approx 27 \times \sqrt{3} \approx 47~\text{Hz},
+\end{equation}
+approaching the observed range.  The remaining discrepancy (47~Hz vs.\
+60--69~Hz) is attributable to the geometric confinement of the PB channel,
+which restricts the PB film deformation and further increases the
+effective stiffness.  A full normal-mode analysis of the
+triangular-prism-confined coupled system is left for future work.
+
+\subsection{Implication for local gas film thickness}
+
+Although the \emph{volume-averaged} $\varepsilon$ is nearly constant,
+\emph{local} $\varepsilon(\theta,\phi,t)$ oscillates with the
+droplet shape.  For the $n=2$, $m=0$ mode (axisymmetric ellipsoidal):
+\begin{equation}
+\varepsilon(\theta,t) \approx \varepsilon_0\left[
+1 + \alpha\,P_2(\cos\theta)\,\sin(2\pi f t)
+\right],
+\end{equation}
+where $\alpha \sim \delta R/R \sim 0.03$--$0.04$ and
+$P_2(x) = \frac{1}{2}(3x^2-1)$.
+
+The \textbf{minimum local thickness} occurs at the equator
+($\theta = \pi/2$, $P_2 = -1/2$) during the oblate phase:
+\begin{equation}
+\varepsilon_{\min} = \varepsilon_0\left(1 - \frac{\alpha}{2}\right)
+\approx 0.98\,\varepsilon_0.
+\end{equation}
+
+For $\varepsilon_0 \sim 10~\mu\text{m}$,
+$\varepsilon_{\min} \sim 9.8~\mu\text{m}$, far above the van der Waals
+rupture threshold $\varepsilon_{\text{crit}} \sim 100$~nm.
+This explains why well-formed 1G1L structures with sufficient initial
+gas survive for many oscillation cycles.
+
+\section{Cyclic Gas Shuttling and the Collapse Mechanism}
+
+\subsection{Two-timescale structure}
+
+The gas film dynamics separate into two distinct timescales:
+
+\textbf{Fast timescale ($\sim T_{\text{osc}} \sim 15$~ms): Reversible shuttling.}
+During each oscillation cycle, gas shuttles back and forth between the
+gas pocket and the thin-film region.  Because $\tau_{\text{eq}} \ll T_{\text{osc}}$,
+pressure equilibration is nearly instantaneous, and the shuttling is almost
+perfectly reversible.  This is not an RC decay process but a \textbf{cyclic
+charge--discharge} process:
+\begin{equation}
+V_p(t) \;\rightleftharpoons\; V_f(t) \quad\text{(reversible, each cycle)}.
+\end{equation}
+
+\textbf{Slow timescale ($\gg T_{\text{osc}}$): Irreversible net leakage.}
+A small fraction of gas is lost each cycle through:
+
+\begin{enumerate}
+\item \textbf{Bottom-edge leakage:} At the droplet's lower triple line
+(where gas film, PB liquid, and droplet meet), gas can escape.
+During the compression half-cycle, $P_{\text{gas}} > P_{\text{amb}}$,
+driving a Poiseuille-type leak through the $\varepsilon$-thick gap.
+The leakage per cycle scales as
+\begin{equation}
+\Delta V_{\text{leak}} \sim
+\frac{2\pi R_0\,\varepsilon_{\min}^3}{12\mu_a}\,
+\frac{P_{\text{gas}} - P_{\text{amb}}}{L_{\text{edge}}}\,
+\frac{T_{\text{osc}}}{2}.
+\end{equation}
+
+\item \textbf{Gas dissolution:} Air dissolves into the surrounding
+aqueous PB liquid.  The dissolution rate is limited by diffusion
+through the $\sim\mu$m-thick PB soap film and is typically slow
+(timescale $\sim 10^2$--$10^3$~s) compared to $t_{\text{trans}}$.
+
+\item \textbf{Geometric rectification:} The $h^3$ nonlinearity of
+lubrication flow acts as a \textbf{diode}: the compression half-cycle
+($\varepsilon$ small) expels more gas than the expansion half-cycle
+($\varepsilon$ large) can re-absorb.  The rectification ratio is
+\begin{equation}
+\frac{Q_{\text{out}}}{Q_{\text{in}}}
+\sim \left(\frac{\varepsilon_{\max}}{\varepsilon_{\min}}\right)^3
+\sim \left(\frac{1+\alpha}{1-\alpha}\right)^3
+\sim 1 + 6\alpha + O(\alpha^2),
+\end{equation}
+giving a $\sim 20\%$ net outward bias per cycle for $\alpha \sim 0.03$.
+\end{enumerate}
+
+\subsection{Number of sustainable cycles}
+
+The system can sustain $N$ oscillation cycles before the cumulative
+gas loss depletes the gas pocket and the mean film thickness $\bar{\varepsilon}$
+drops sufficiently that $\varepsilon_{\min}$ during a compression phase
+falls below $\varepsilon_{\text{crit}} \sim 100$~nm:
+
+\begin{equation}
+N \sim \frac{V_{\text{gas}}(0)}{\langle\Delta V_{\text{leak}}\rangle},
+\qquad
+t_{\text{survival}} = N \times T_{\text{osc}}.
+\end{equation}
+
+Collapse occurs when:
+\begin{equation}
+\boxed{t_{\text{survival}} < t_{\text{trans}}.}
+\end{equation}
+
+\subsection{Connection to experimental observables}
+
+The key parameters governing $N$ are:
+
+\begin{itemize}
+\item \textbf{Initial gas volume} $V_{\text{gas}}(0) = V_p(0) + V_f(0)$,
+      determined by the air entrainment during pinch-off (Stage~2).
+      Larger $V_p/V_f$ ratio $\to$ more buffer $\to$ longer survival.
+
+\item \textbf{Oscillation amplitude} $\alpha = \delta R/R$.
+      Larger $\alpha$ $\to$ stronger rectification $\to$ faster leakage.
+      The $n=2$ mode is volume-preserving globally, but the gas pocket
+      breaks symmetry, creating local $\varepsilon$ variations.
+
+\item \textbf{PB transit time} $t_{\text{trans}} = L_{\text{PB}}/v$.
+      Longer transit $\to$ more cycles $\to$ higher collapse risk.
+\end{itemize}
+
+\subsection{Rigid-sphere contrast}
+
+For a rigid sphere ($\delta R = 0$, $\alpha = 0$):
+\begin{itemize}
+\item No shape oscillation $\to$ no rectified pumping $\to$
+      $\Delta V_{\text{leak}} \approx 0$.
+\item No gas pocket ($V_p = 0$) $\to$ the gas film (if any) is purely
+      geometric, determined by the PB channel shape.
+\item Collapse is impossible ($N \to \infty$).
+\end{itemize}
+
+This prediction is confirmed by experiments: rigid spheres (PP, PMMA, PS, POM)
+exhibit stable transport through the PB channel with no collapse events,
+validating the central role of droplet deformability in the collapse mechanism.
+
+\subsection{Collapse criterion (simplified form)}
+
+Combining the above, a practical collapse criterion for droplet transport
+through the PB can be expressed in terms of a dimensionless collapse number:
+
+\begin{equation}
+\boxed{\mathcal{C} \equiv
+\alpha^3 \times \frac{f\,t_{\text{trans}}}{V_p/V_f}
+< \mathcal{C}_{\text{crit}},}
+\end{equation}
+
+where $\alpha = \delta R/R$ is the relative oscillation amplitude,
+$f\,t_{\text{trans}}$ is the number of oscillation cycles during transit,
+$V_p/V_f$ is the gas-pocket-to-film volume ratio, and
+$\mathcal{C}_{\text{crit}}$ is a geometry-dependent constant to be
+determined from experimental $\varepsilon$ measurements.
+The cubic dependence on $\alpha$ reflects the $h^3$ rectification
+nonlinearity of lubrication flow.
+
+\section{Oscillation vs.\ Gravity Drainage}
+
+In classical antibubble stability, gravitational drainage drives the
+gas film to thin and eventually rupture~\cite{Dorbolo2005,Scheid2014}.
+We show that in the PB transport regime, oscillation-driven effects
+dominate.
+
+\subsection{Dimensional analysis}
+
+The characteristic velocity of gravity-driven film drainage
+(Reynolds drainage) is
+\begin{equation}
+v_g \sim \frac{\rho g \varepsilon_0^2}{\mu},
+\end{equation}
+giving a gravitational drainage time
+\begin{equation}
+\tau_g \sim \frac{R_0}{v_g}
+\sim \frac{\mu R_0}{\rho g \varepsilon_0^2}.
+\end{equation}
+
+The characteristic velocity of oscillation-driven gas motion is
+\begin{equation}
+v_{\text{osc}} \sim \delta R \times f,
+\end{equation}
+with oscillation period $T_{\text{osc}} = 1/f$.
+
+Their ratio is
+\begin{equation}
+\frac{\tau_g}{t_{\text{trans}}}
+\sim \frac{\mu R_0}{\rho g \varepsilon_0^2}\,
+\frac{v}{L_{\text{PB}}}
+\sim \frac{1.2\times10^{-3} \times 2\times10^{-3}}
+{10^3 \times 9.8 \times (10^{-5})^2}\,
+\frac{0.5}{0.05}
+\sim 2.4~\text{s} / 0.1~\text{s}
+\sim 24 \gg 1.
+\end{equation}
+
+\begin{equation}
+\frac{v_{\text{osc}}}{v_g}
+\sim \frac{\delta R \times f}{\rho g \varepsilon_0^2/\mu}
+\sim \frac{7\times10^{-5} \times 65}
+{10^4 \times 10^{-10}/1.2\times10^{-3}}
+\sim \frac{4.5\times10^{-3}}{8.3\times10^{-4}}
+\sim 5.4 > 1.
+\end{equation}
+
+\subsection{Conclusion}
+
+Gravitational drainage requires $\sim 2.4$~s to thin the film appreciably,
+while the droplet transits the PB in $\sim 0.1$~s.  Gravity does not have
+time to act.  In contrast, oscillation-driven gas shuttling occurs every
+$\sim 15$~ms, with a characteristic velocity $\sim 5\times$ larger than
+gravitational drainage.  \textbf{Oscillation-driven mechanisms dominate
+gas film dynamics during PB transport.}
+
+\section{Summary of Dimensionless Groups}
+
+Table~S1 collects the dimensionless parameters governing the droplet--PB system.
+
+\begin{table}[h]
+\caption{Dimensionless groups for droplet--PB transport.}
+\label{tab:dimensionless}
+\begin{ruledtabular}
+\begin{tabular}{lll}
+\textbf{Group} & \textbf{Definition} & \textbf{Physical meaning} \\
+\hline
+We  & $\rho v_0^2 D / \sigma$ & Kinetic vs.\ surface energy \\
+Bo  & $\rho g D^2 / \sigma$   & Gravitational vs.\ surface energy \\
+$C_1$ & $\text{We}+2\text{Bo}$ at threshold & Energy barrier for PB entry \\
+$t_p/t_d$ & $\propto \sigma\varepsilon/\mu_a\sqrt{\rho/\sigma R}$ & Pinch-off vs.\ drainage time \\
+$\tau_{\text{eq}}/T_{\text{osc}}$ & $\propto \mu_a/\varepsilon_0^2 f$ & Pressure equilibration speed \\
+$\Pi_{\text{spring}}$ & $(P_{\text{amb}}R_0^2/\sigma\varepsilon_0)/(1+V_p/V_f)$ & Gas spring vs.\ capillary stiffness \\
+$\mathcal{C}$ & $\alpha^3 f t_{\text{trans}}/(V_p/V_f)$ & Collapse number \\
+$\tau_g/t_{\text{trans}}$ & $\propto \mu R_0/(\rho g\varepsilon_0^2 t_{\text{trans}})$ & Gravity drainage relevance \\
+\hline
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\section{Summary of Key Experimental Quantities}
+
+Table~S2 summarizes the measured and derived quantities for the processed
+droplet cases.
+
+\begin{table}[h]
+\caption{Measured quantities for processed 0415-batch droplet cases.}
+\label{tab:experimental}
+\begin{ruledtabular}
+\begin{tabular}{lccccc}
+\textbf{Case} & $R$ (mm) & $f$ (Hz) & $\delta R/R$ (\%) &
+$R_{\text{std}}/R$ (\%) & Valid frames \\
+\hline
+0415-42star\_freefall & 2.035 & $60.6\pm0.4$ & 3.9 & 1.29 & 141 \\
+0415-11star\_multi    & 1.936 & $68.6\pm0.7$ & 3.3 & 2.40 & 131 \\
+0415-17star\_MB       & 2.331 & $62.1\pm1.3$ & 3.3 & 3.99 & 116 \\
+0415-26star\_DB       & 2.007 & --- & --- & 2.06 & 116 \\
+0415-32star\_insuff   & 1.701 & --- & --- & 4.05 & 18 \\
+\hline
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Note: $\delta R/R$ is the fitted oscillation amplitude from the
+quadratic + harmonic fit; $R_{\text{std}}/R$ is the raw radius standard
+deviation including all non-oscillatory variations.
+The insufficient-deformation case (032) has only 18 valid tracking frames,
+indicating structural failure shortly after PB entry.
+
+%%%%%%%
+
+\begin{thebibliography}{99}
+
+\bibitem{Bai2016}
+L.~Bai, Y.~Zhang, and W.~Xu,
+``Formation of antibubbles and multilayer antibubbles,''
+\textit{Soft Matter} \textbf{12}, 5678 (2016).
+
+\bibitem{Lamb1881}
+H.~Lamb,
+``On the vibrations of an elastic sphere,''
+\textit{Proc. London Math. Soc.} \textbf{13}, 189 (1881).
+
+\bibitem{Prosperetti1980}
+A.~Prosperetti,
+``Free oscillations of drops and bubbles: the initial-value problem,''
+\textit{J. Fluid Mech.} \textbf{100}, 333 (1980).
+
+\bibitem{Dorbolo2005}
+S.~Dorbolo, H.~Caps, and N.~Vandewalle,
+``Fluid instabilities in the birth and death of antibubbles,''
+\textit{New J. Phys.} \textbf{7}, 1 (2005).
+
+\bibitem{Scheid2014}
+B.~Scheid, S.~Dorbolo, L.~R.~Arriaga, and E.~Rio,
+``Antibubble dynamics: The drainage of an air film with viscous interfaces,''
+\textit{Phys. Rev. Lett.} \textbf{109}, 264502 (2012).
+
+\bibitem{Cohen2014}
+C.~Cohen, B.~Dollet, J.~P.~Raven, E.~Lorenceau, and P.~Marmottant,
+``Droplet injection into a foam Plateau border,''
+\textit{Phys. Rev. Lett.} \textbf{112}, 218303 (2014).
+
+\bibitem{MillerScriven1968}
+C.~A.~Miller and L.~E.~Scriven,
+``The oscillations of a fluid droplet immersed in another fluid,''
+\textit{J. Fluid Mech.} \textbf{32}, 417 (1968).
+
+\bibitem{Commereuc2024}
+A.~Commereuc, S.~Mariot, E.~Rio, and F.~Boulogne,
+``Straight to zigzag transition of foam pseudo-Plateau borders on textured surfaces,''
+\textit{Phys. Rev. Fluids} \textbf{9}, L041601 (2024).
+
+\end{thebibliography}
+
+\end{document}

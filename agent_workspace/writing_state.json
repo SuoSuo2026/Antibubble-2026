@@ -71,5 +71,20 @@
       }
     }
   },
-  "updated_at": "2026-06-23T16:57:01"
+  "updated_at": "2026-06-25T18:00:00",
+  "theory_framework": {
+    "status": "structured",
+    "criteria": ["We-Bo", "t_p/t_d", "Collapse number C"],
+    "coupled_model": "PB film + droplet + gas film oscillator",
+    "key_insight": "n=2 mode volume-preserving → cyclic shuttling, not RC decay",
+    "gravity_vs_oscillation": "oscillation dominates (tau_g/t_trans ~ 24, v_osc/v_g ~ 5.4)",
+    "supplementary_material": "library/Supplementary_Material.tex",
+    "overleaf_package": "library/Overleaf_Package/"
+  },
+  "pending_experiments": {
+    "epsilon_measurement": "gas pocket tracking (Method D), interferometry (Method B backup)",
+    "outcome_labeling": "0415 batch cases need outcome classification",
+    "V_pocket_extraction": "from pinch-off high-speed images",
+    "collapse_number_calibration": "requires V_p, epsilon_0, We, Bo for all cases"
+  }
 }

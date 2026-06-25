@@ -12,3 +12,10 @@
 - 2026-06-08：Quill Session Refresh 已运行；触发=dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。
 - 2026-06-18：Quill Session Refresh 已运行；触发=dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。
 - 2026-06-23：Quill Session Refresh 已运行；触发=dashboard_changed；当前 16 Cases / 12 已处理 / Zotero 213 条。
+- 2026-06-25：【重大进展】理论框架系统梳理完成。
+  核心产出：(1) 创新点重塑为"PB中液滴与硬球平行输运"，双线对照分离几何 vs 变形贡献；
+  (2) 建立耦合 PB 液膜–液滴振荡模型，发现 n=2 模态体积守恒 → 解释循环充放；
+  (3) 提出 Collapse 数 C ≡ α³ft/(V_p/V_f)；(4) 振荡主导重力（v_osc/v_g ~ 5.4）；
+  (5) 完整理论附录写入 `library/Supplementary_Material.tex`；
+  (6) Overleaf 排版包创建于 `library/Overleaf_Package/`。
+  待办：接入原始数据 → 提取 V_pocket → 标定 ε₀ → 验证 Collapse 数。

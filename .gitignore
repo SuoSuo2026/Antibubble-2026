@@ -29,7 +29,9 @@ agent_workspace/*
 !agent_workspace/reviewer_prompt_templates.md
 !agent_workspace/rigid_ball_afternoon_protocol.md
 !agent_workspace/quill_session_brief.md
+!agent_workspace/quill_session_state.json
 !agent_workspace/daily_memo.md
+!agent_workspace/theory_framework.json
 
 # Dashboard auto-generated cache
 dashboard/dashboard_data.json
